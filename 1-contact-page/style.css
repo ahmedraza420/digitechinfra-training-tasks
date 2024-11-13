@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --header-height: 7rem;
+    --bg-primary:  #f8f9fb;
+    --bg-secondary: #212429;
+    --c-accent: #fed005;
+    --txt-primary: #323438;
+    --txt-secondary: #d4d1d1;
+    --input-height: 2rem;
+}
+
+body {
+    position: relative;
+    top: 0;
+    margin: 0;
+    min-height: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Lato", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto;
+    background-color: var(--bg-primary);
+}
+
+h1 {   
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+header {
+    z-index: 1;
+    position: fixed;
+    padding: 0.5rem 1rem 1rem 1rem;
+    height: var(--header-height);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--bg-primary);
+}
+
+.header-icon {
+    height: 1rem;
+    width: 1rem;
+}
+
+.top-bar {
+    display: flex;
+    width: 95%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    color: #6d6d6d;
+    fill: #6d6d6d;
+}
+
+.tel-wrapper {
+    max-width: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tel {
+    margin-block: 0;
+}
+
+.social-fb {
+    margin-left: auto;
+}
+
+.header {
+    padding-inline: 3rem;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+button:has(.business-logo) {
+    border: none;
+    background: none;
+    margin: none;
+}
+
+.business-logo {
+    font-weight: 1000;
+}
+
+.header ul {
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style-type: none;
+    font-weight: 400;
+    color: rgb(44, 44, 44);
+}
+
+li:has(button) button {
+    border: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--c-accent);
+    transition: 0.2s ease;
+}
+
+li:has(button) button:hover {
+    filter: brightness(95%);
+    box-shadow: 0.1rem 0.1rem 0.1rem rgb(0 0 0 / 0.1);
+}
+
+li:not(:has(button)) {
+    position: relative;
+}
+
+li:not(:has(button))::after {
+    content: "";
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0;
+    width: 0;
+    height: 0.15rem;
+    background-color: var(--c-accent);
+    transition: 0.2s ease;
+}
+
+li:not(:has(button)):hover::after {
+    width: 100%;
+}
+
+.main {
+    /* position: relative;
+    top: var(--header-height);   */
+    margin-top: var(--header-height);
+    width: 90svw;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero {
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 12rem;
+    background: url(./images/building-image.jpg);
+    background-position: center;
+}
+
+.hero h1 {
+    position: relative;
+    top: 50%;
+    left: 5rem;
+    margin-block: 0;
+    width: max-content;
+    transform: translateY(-50%);
+    color: var(--bg-primary);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.map-wrapper {
+    border-radius: 50%;
+    overflow: hidden;
+    justify-self: center;
+    align-self: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
+}
+
+input, textarea {
+    padding: 0.5rem;
+}
+
+input {
+    height: var(--input-height);
+}
+
+#subject {
+    grid-column: 1 / span 2;
+}
+
+#message {
+    grid-column: 1 / span 2;
+}
+
+.submit {
+    border: none;
+    border-radius: var(--input-height);
+    padding-inline: 2rem;
+    height: var(--input-height);
+    width: min-content;
+    background-color: var(--c-accent);
+}
+
+footer {
+    /* position: relative;
+    top: var(--header-height); */
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    gap: 1rem;
+    color: var(--txt-secondary);
+    background-color: var(--bg-secondary);
+}
+
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.quick-links a {
+    text-decoration: none;
+    color: var(--txt-secondary);
+    font-size: 1.05rem;
+}
+
+.business-logo, .footer-heading {
+    color: var(--c-accent);
+}
+
+.footer-icon {
+    fill: var(--txt-secondary);
+}
+
+.socials {
+    display: flex;
+}
+
+.socials .social-fb {
+    margin-left: 0;
+}
+
+.copyright {
+    border-top: 0.1rem solid #4a4a4a;
+    padding-top: 1rem;
+    grid-column: 1 / -1;
+}
+
+.copyright a {
+    color: var(--c-accent);
+    transition: 0.2s ease;
+}
+
+.copyright a:hover {
+    filter: brightness(75%);
+}
