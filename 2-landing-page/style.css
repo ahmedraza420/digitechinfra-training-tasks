@@ -1,0 +1,49 @@
+:root {
+    /* --nav-height: 10vh; */
+    --info-height: 8.5rem;
+}
+
+body {
+    font-family: 'inter', system-ui, sans-serif;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: calc(1.5rem + 1.7vw);
+}
+
+.container-fluid {
+    padding: 0;
+}
+/* 
+header {
+    height: var(--nav-height);
+} */
+
+.hero-section {
+    background-image: url(./images/cover-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+}
+
+.hero-content {
+    padding-top: 10rem;
+    filter: drop-shadow(0.1rem 0.1rem 0.2rem black)
+}
+
+.content-desc {
+    padding-block: var(--info-height);   
+}
+
+.content-info {
+    max-height: var(--info-height);
+}
+
+.content-image {
+    height: 45rem;
+}
