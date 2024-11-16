@@ -47,3 +47,16 @@ header {
 .content-image {
     height: 45rem;
 }
+
+.contactus-section {
+    height: 40rem;
+}
+
+.contactus-section button {
+    width: fit-content;
+}
+
+.contactus-wavy-text {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+}
