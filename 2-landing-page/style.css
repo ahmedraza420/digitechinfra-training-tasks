@@ -37,6 +37,7 @@ header {
     background-image: url(./images/cover-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 30rem;
 }
 
@@ -49,9 +50,9 @@ header {
     max-width: calc(2.575rem + 1.5vw)
 }
 
-.content-image {
+/* .content-image {
     max-height: 45rem;
-}
+} */
 
 .contactus-section {
     height: 40rem;
@@ -78,6 +79,7 @@ header {
 
     .content-info {
         position: absolute;
+        bottom: 0;
         max-height: var(--info-height);
     }
 
@@ -85,20 +87,20 @@ header {
 }
 
 @media only screen and (min-width: 200px) and (max-width: 991px) {
-    .content-image {
+    /* .content-image {
         max-height: 35rem;
-    }
-
+    } */
+/* 
     .content-info {
         width: unset;
-    }
+    } */
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .content-info {
         top: 0;
     }
-}
+} */
 
 @media only screen and (min-width: 992px) {
     .top-bar {
