@@ -8,17 +8,26 @@ body {
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: calc(1rem + 0.4vw) !important;
     font-weight: 400;
 }
 
 h4 {
-    font-size: calc(1.5rem + 1.7vw);
+    font-size: calc(1rem + 1.5vw);
+}
+
+.fs-5 {
+    font-size: calc(0.8rem + 0.7vw) !important;
+}
+
+.fs-6 {
+    font-size: calc(0.7rem + 0.4vw) !important;
 }
 
 .container-fluid {
     padding: 0;
 }
+
 /* 
 header {
     height: var(--nav-height);
@@ -36,16 +45,12 @@ header {
     filter: drop-shadow(0.1rem 0.1rem 0.2rem black)
 }
 
-.content-desc {
-    padding-block: var(--info-height);   
-}
-
-.content-info {
-    max-height: var(--info-height);
+.content-info-img {
+    max-width: calc(2.575rem + 1.5vw)
 }
 
 .content-image {
-    height: 45rem;
+    max-height: 45rem;
 }
 
 .contactus-section {
@@ -59,4 +64,50 @@ header {
 .contactus-wavy-text {
     text-decoration-line: underline;
     text-decoration-style: wavy;
+}
+
+.content-info {
+    left: 0;
+}
+ 
+
+@media only screen and (min-width: 768px) {
+    .content-desc {
+        padding-bottom: var(--info-height);
+    }
+
+    .content-info {
+        position: absolute;
+        max-height: var(--info-height);
+    }
+
+    
+}
+
+@media only screen and (min-width: 200px) and (max-width: 991px) {
+    .content-image {
+        max-height: 35rem;
+    }
+
+    .content-info {
+        width: unset;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .content-info {
+        top: 0;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .top-bar {
+        display: block !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .main > div {
+        max-width: 1040px;
+    }
 }

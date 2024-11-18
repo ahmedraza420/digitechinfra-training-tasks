@@ -21,7 +21,7 @@
 <body>
     <!-- Header -->
     <header class="container-fluid bg-light position-sticky top-0 z-1 shadow">
-        <div class="container py-1">
+        <div class="container py-1 d-none top-bar">
             <div class="row text-secondary">
                 <div class="col text-nowrap">
                     <i class="fa-solid fa-phone"></i> Tel: 021-34545999
@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="container py-2">
-            <nav class="navbar navbar-expand-lg container-fluid">
+            <nav class="navbar navbar-expand-lg mx-container-fluid">
                 <a href="#" class="navbar-brand">
                     <img src="" alt="Company Logo">
                 </a>
@@ -48,24 +48,19 @@
                     <ul
                         class="offcanvas-body navbar-nav fw-semibold gap-3 text-secondary pt-5 p-lg-0 justify-content-start justify-content-lg-end align-items-center align-items-lg-start">
                         <li class="nav-item">
-                            <a href=""
-                                class="nav-link text-decoration-underline link-underline-opacity-0 link-offset-3 link-underline-warning link-underline-opacity-100-hover">Home</a>
+                            <a href="" class="nav-link text-decoration-underline link-underline-opacity-0 link-offset-3 link-underline-warning link-underline-opacity-100-hover">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href=""
-                                class="nav-link text-decoration-underline link-underline-opacity-0 link-offset-3 link-underline-warning link-underline-opacity-100-hover">Project</a>
+                            <a href="" class="nav-link text-decoration-underline link-underline-opacity-0 link-offset-3 link-underline-warning link-underline-opacity-100-hover">Project</a>
                         </li>
                         <li class="nav-item">
-                            <a href=""
-                                class="nav-link text-decoration-underline link-underline-opacity-0 link-offset-3 link-underline-warning link-underline-opacity-100-hover">About</a>
+                            <a href="" class="nav-link text-decoration-underline link-underline-opacity-0 link-offset-3 link-underline-warning link-underline-opacity-100-hover">About</a>
                         </li>
                         <li class="nav-item">
-                            <a href=""
-                                class="nav-link text-decoration-underline link-underline-opacity-0 link-offset-3 link-underline-warning link-underline-opacity-100-hover">Services</a>
+                            <a href="" class="nav-link text-decoration-underline link-underline-opacity-0 link-offset-3 link-underline-warning link-underline-opacity-100-hover">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a href=""
-                                class="nav-link text-decoration-underline link-underline-opacity-0 link-offset-3 link-underline-warning link-underline-opacity-100-hover">Contact</a>
+                            <a href="" class="nav-link text-decoration-underline link-underline-opacity-0 link-offset-3 link-underline-warning link-underline-opacity-100-hover">Contact</a>
                         </li>
                         <li class="nav-item">
                             <button class="btn btn-warning rounded-pill text-white px-3">
@@ -88,13 +83,13 @@
     <!-- Main Section -->
     <section class="container-fluid main">
         <div class="container my-5 position-relative">
-            <div class="row py-5 align-items-center">
-                <div class="col fs-4 text-dark-emphasis content-desc">
+            <div class="row flex-column flex-sm-row gap-3 gap-sm-0 col-rows-2 py-0 py-md-5 align-items-center justify-content-lg-between">
+                <div class="col fs-4 text-dark-emphasis content-desc order-2 order-sm-3 order-md-first">
                     <h4 class="text-dark fw-medium lh-sm">RJ Heaven <br> RJ Group Builders & Developers</h4>
-                    <p class="lh-sm mb-3 mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus ad
+                    <p class="lh-sm mb-3 mt-4 fs-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus ad
                         culpa nesciunt esse dignissimos voluptatum sit similique obcaecati temporibus id error, a minima
                         ipsa corrupti.</p>
-                    <ul class="m-0 p-0 list-unstyled">
+                    <ul class="m-0 p-0 list-unstyled fs-5">
                         <li class="mb-3"> <i
                                 class="fa-solid fa-chevron-right list-arrow text-warning fw-bolder pe-3"></i> 42 Month
                             Payment Schedule</li>
@@ -105,53 +100,52 @@
                                 class="fa-solid fa-chevron-right list-arrow text-warning fw-bolder pe-3"></i> Prime
                             Location of Some Road</li>
                     </ul>
-                    <button class="btn btn-warning btn-outline-dark rounded-0">READ MORE</button>
+                    <button class="btn btn-warning btn-outline-dark rounded-0 fs-5">READ MORE</button>
                 </div>
-                <div class="col-auto">
+                <div class="col-8 col-md-auto order-first">
                     <img src="./images/estate-1.jpg" alt="" class="img-fluid content-image">
                 </div>
-            </div>
-            <div class="row position-absolute bottom-0 content-info">
-                <div
-                    class="row col-9 gap-4 border border-2 border-secondary border-opacity-50 bg-white p-3 justify-content-between">
-                    <div class="col-4 row align-items-center">
-                        <div class="col-5">
-                            <img src="./images/apartment-icon.png" alt="" class="img-fluid">
+                <div class="row col-auto bottom-0 content-info text-center flex-row flex-sm-column flex-md-row order-3 order-sm-2">
+                    <div class="row col-auto row-cols-3 flex-row flex-sm-column flex-md-row gap-lg-5 border border-2 border-secondary border-opacity-50 bg-white mx-0 px-3 pt-3 p-sm-3 p-md-0 py-md-3 p-md-3 align-items-center justify-content-between">
+                        <div class="row col-auto flex-column flex-md-row flex-nowrap text-md-start align-items-center gap-3 gap-sm-0">
+                            <div class="col-auto">
+                                <img src="./images/apartment-icon.png" alt="" class="img-fluid content-info-img">
+                            </div>
+                            <div class="col-auto">
+                                <h5 class="text-warning fs-2">100</h5>
+                                <p class="text-secondary fs-6">Apartments</p>
+                            </div>
                         </div>
-                        <div class="col-7">
-                            <h5 class="text-warning fs-1">100</h5>
-                            <p class="text-secondary">Apartments</p>
+                        <div class="row col-auto  flex-column flex-md-row  flex-nowrap align-items-center gap-3 gap-sm-0">
+                            <div class="col-auto">
+                                <img src="./images/storage-icon.png" alt="" class="img-fluid content-info-img">
+                            </div>
+                            <div class="col-auto">
+                                <h5 class="text-warning fs-2">50</h5>
+                                <p class="text-secondary fs-6">Storages</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-4 row align-items-center">
-                        <div class="col-5">
-                            <img src="./images/storage-icon.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-7">
-                            <h5 class="text-warning fs-1">50</h5>
-                            <p class="text-secondary">Storages</p>
-                        </div>
-                    </div>
-                    <div class="col-4 row align-items-center">
-                        <div class="col-5">
-                            <img src="./images/area-icon.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-7">
-                            <h5 class="text-warning fs-1">2500M</h5>
-                            <p class="text-secondary">Site Area</p>
+                        <div class="row col-auto  flex-column flex-md-row  flex-nowrap align-items-center gap-3 gap-sm-0">
+                            <div class="col-auto">
+                                <img src="./images/area-icon.png" alt="" class="img-fluid content-info-img">
+                            </div>
+                            <div class="col-auto">
+                                <h5 class="text-warning fs-2">2500M</h5>
+                                <p class="text-secondary fs-6">Site Area</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container my-5 position-relative">
-            <div class="row py-5  align-items-center">
-                <div class="col fs-4 text-dark-emphasis content-desc">
+            <div class="row flex-column flex-sm-row gap-3 gap-sm-0 col-rows-2 py-0 py-md-5 align-items-center justify-content-lg-between">
+                <div class="col fs-4 text-dark-emphasis content-desc order-2 order-sm-3 order-md-first">
                     <h4 class="text-dark fw-medium lh-sm">RJ Heaven <br> RJ Group Builders & Developers</h4>
-                    <p class="lh-sm mb-3 mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus ad
+                    <p class="lh-sm mb-3 mt-4 fs-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus ad
                         culpa nesciunt esse dignissimos voluptatum sit similique obcaecati temporibus id error, a minima
                         ipsa corrupti.</p>
-                    <ul class="m-0 p-0 list-unstyled">
+                    <ul class="m-0 p-0 list-unstyled fs-5">
                         <li class="mb-3"> <i
                                 class="fa-solid fa-chevron-right list-arrow text-warning fw-bolder pe-3"></i> 42 Month
                             Payment Schedule</li>
@@ -162,53 +156,52 @@
                                 class="fa-solid fa-chevron-right list-arrow text-warning fw-bolder pe-3"></i> Prime
                             Location of Some Road</li>
                     </ul>
-                    <button class="btn btn-warning btn-outline-dark rounded-0">READ MORE</button>
+                    <button class="btn btn-warning btn-outline-dark rounded-0 fs-5">READ MORE</button>
                 </div>
-                <div class="col-auto">
+                <div class="col-8 col-md-auto order-first">
                     <img src="./images/estate-2.jpg" alt="" class="img-fluid content-image">
                 </div>
-            </div>
-            <div class="row position-absolute bottom-0 content-info">
-                <div
-                    class="row col-9 gap-4 border border-2 border-secondary border-opacity-50 bg-white p-3 justify-content-between">
-                    <div class="col-4 row align-items-center">
-                        <div class="col-5">
-                            <img src="./images/apartment-icon.png" alt="" class="img-fluid">
+                <div class="row col-auto bottom-0 content-info text-center flex-row flex-sm-column flex-md-row order-3 order-sm-2">
+                    <div class="row col-auto row-cols-3 flex-row flex-sm-column flex-md-row gap-lg-5 border border-2 border-secondary border-opacity-50 bg-white mx-0 px-3 pt-3 p-sm-3 p-md-0 py-md-3 p-md-3 align-items-center justify-content-between">
+                        <div class="row col-auto flex-column flex-md-row flex-nowrap text-md-start align-items-center gap-3 gap-sm-0">
+                            <div class="col-auto">
+                                <img src="./images/apartment-icon.png" alt="" class="img-fluid content-info-img">
+                            </div>
+                            <div class="col-auto">
+                                <h5 class="text-warning fs-2">100</h5>
+                                <p class="text-secondary fs-6">Apartments</p>
+                            </div>
                         </div>
-                        <div class="col-7">
-                            <h5 class="text-warning fs-1">100</h5>
-                            <p class="text-secondary">Apartments</p>
+                        <div class="row col-auto  flex-column flex-md-row  flex-nowrap align-items-center gap-3 gap-sm-0">
+                            <div class="col-auto">
+                                <img src="./images/storage-icon.png" alt="" class="img-fluid content-info-img">
+                            </div>
+                            <div class="col-auto">
+                                <h5 class="text-warning fs-2">50</h5>
+                                <p class="text-secondary fs-6">Storages</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-4 row align-items-center">
-                        <div class="col-5">
-                            <img src="./images/storage-icon.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-7">
-                            <h5 class="text-warning fs-1">50</h5>
-                            <p class="text-secondary">Storages</p>
-                        </div>
-                    </div>
-                    <div class="col-4 row align-items-center">
-                        <div class="col-5">
-                            <img src="./images/area-icon.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-7">
-                            <h5 class="text-warning fs-1">2500M</h5>
-                            <p class="text-secondary">Site Area</p>
+                        <div class="row col-auto  flex-column flex-md-row  flex-nowrap align-items-center gap-3 gap-sm-0">
+                            <div class="col-auto">
+                                <img src="./images/area-icon.png" alt="" class="img-fluid content-info-img">
+                            </div>
+                            <div class="col-auto">
+                                <h5 class="text-warning fs-2">2500M</h5>
+                                <p class="text-secondary fs-6">Site Area</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container my-5 position-relative">
-            <div class="row py-5 align-items-center">
-                <div class="col fs-4 text-dark-emphasis content-desc">
+            <div class="row flex-column flex-sm-row gap-3 gap-sm-0 col-rows-2 py-0 py-md-5 align-items-center justify-content-lg-between">
+                <div class="col fs-4 text-dark-emphasis content-desc order-2 order-sm-3 order-md-first">
                     <h4 class="text-dark fw-medium lh-sm">RJ Heaven <br> RJ Group Builders & Developers</h4>
-                    <p class="lh-sm mb-3 mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus ad
+                    <p class="lh-sm mb-3 mt-4 fs-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus ad
                         culpa nesciunt esse dignissimos voluptatum sit similique obcaecati temporibus id error, a minima
                         ipsa corrupti.</p>
-                    <ul class="m-0 p-0 list-unstyled">
+                    <ul class="m-0 p-0 list-unstyled fs-5">
                         <li class="mb-3"> <i
                                 class="fa-solid fa-chevron-right list-arrow text-warning fw-bolder pe-3"></i> 42 Month
                             Payment Schedule</li>
@@ -219,40 +212,39 @@
                                 class="fa-solid fa-chevron-right list-arrow text-warning fw-bolder pe-3"></i> Prime
                             Location of Some Road</li>
                     </ul>
-                    <button class="btn btn-warning btn-outline-dark rounded-0">READ MORE</button>
+                    <button class="btn btn-warning btn-outline-dark rounded-0 fs-5">READ MORE</button>
                 </div>
-                <div class="col-auto">
+                <div class="col-8 col-md-auto order-first">
                     <img src="./images/estate-3.jpg" alt="" class="img-fluid content-image">
                 </div>
-            </div>
-            <div class="row position-absolute bottom-0 content-info">
-                <div
-                    class="row col-9 gap-4 border border-2 border-secondary border-opacity-50 bg-white p-3 justify-content-between">
-                    <div class="col-4 row align-items-center">
-                        <div class="col-5">
-                            <img src="./images/apartment-icon.png" alt="" class="img-fluid">
+                <div class="row col-auto bottom-0 content-info text-center flex-row flex-sm-column flex-md-row order-3 order-sm-2">
+                    <div class="row col-auto row-cols-3 flex-row flex-sm-column flex-md-row gap-lg-5 border border-2 border-secondary border-opacity-50 bg-white mx-0 px-3 pt-3 p-sm-3 p-md-0 py-md-3 p-md-3 align-items-center justify-content-between">
+                        <div class="row col-auto flex-column flex-md-row flex-nowrap text-md-start align-items-center gap-3 gap-sm-0">
+                            <div class="col-auto">
+                                <img src="./images/apartment-icon.png" alt="" class="img-fluid content-info-img">
+                            </div>
+                            <div class="col-auto">
+                                <h5 class="text-warning fs-2">100</h5>
+                                <p class="text-secondary fs-6">Apartments</p>
+                            </div>
                         </div>
-                        <div class="col-7">
-                            <h5 class="text-warning fs-1">100</h5>
-                            <p class="text-secondary">Apartments</p>
+                        <div class="row col-auto  flex-column flex-md-row  flex-nowrap align-items-center gap-3 gap-sm-0">
+                            <div class="col-auto">
+                                <img src="./images/storage-icon.png" alt="" class="img-fluid content-info-img">
+                            </div>
+                            <div class="col-auto">
+                                <h5 class="text-warning fs-2">50</h5>
+                                <p class="text-secondary fs-6">Storages</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-4 row align-items-center">
-                        <div class="col-5">
-                            <img src="./images/storage-icon.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-7">
-                            <h5 class="text-warning fs-1">50</h5>
-                            <p class="text-secondary">Storages</p>
-                        </div>
-                    </div>
-                    <div class="col-4 row align-items-center">
-                        <div class="col-5">
-                            <img src="./images/area-icon.png" alt="" class="img-fluid">
-                        </div>
-                        <div class="col-7">
-                            <h5 class="text-warning fs-1">2500M</h5>
-                            <p class="text-secondary">Site Area</p>
+                        <div class="row col-auto  flex-column flex-md-row  flex-nowrap align-items-center gap-3 gap-sm-0">
+                            <div class="col-auto">
+                                <img src="./images/area-icon.png" alt="" class="img-fluid content-info-img">
+                            </div>
+                            <div class="col-auto">
+                                <h5 class="text-warning fs-2">2500M</h5>
+                                <p class="text-secondary fs-6">Site Area</p>
+                            </div>
                         </div>
                     </div>
                 </div>
