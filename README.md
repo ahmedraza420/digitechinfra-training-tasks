@@ -4,3 +4,5 @@ This repository contains the tasks that were given to me during my training at D
 # Live Pages
 
 Task 1: [Contact Page](https://ahmedraza420.github.io/digitechinfra-training-tasks/1-contact-page).
+
+Task 2: [Landing Page](https://ahmedraza420.github.io/digitechinfra-training-tasks/2-landing-page).
