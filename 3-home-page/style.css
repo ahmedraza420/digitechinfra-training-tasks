@@ -5,6 +5,7 @@ html {
 :root {
     --bg-custom: #15495e;
     --bg-custom-1: #f0f8fb;
+    --bg-custom-2: #3e7e97;
     /* --text-custom: #072a37;  */
     --text-custom: #15495e; 
     --text-custom-1: #1c6684; 
@@ -27,6 +28,11 @@ header {
 
 .btn-custom {
     background: var(--bg-custom);
+    color: rgb(246 246 248);
+}
+
+.btn-custom-1 {
+    background: var(--bg-custom-2);
     color: rgb(246 246 248);
 }
 
@@ -137,5 +143,23 @@ header {
 } */
 
 .order {
-    background: fixed white url(./images/order-section-image.png) no-repeat 100svw/100svh ;
+    background:white url(./images/order-section-image.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.feedback {
+    background: center / cover no-repeat url(./images/feedback-bg.png);
+}
+
+footer {
+    background: url(./images/footerback.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.copyright {
+    font-size: calc(0.6rem + 0.4vw);
 }
