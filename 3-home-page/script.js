@@ -5,6 +5,7 @@ const carouselCards = [...carousel.children]; // cloning cards for infinite scro
 
 
 let isDragging = false, startX, currentScrollPos, isHovering = false;
+let cardsInView = Math.round(carousel.offsetWidth / cardWidth); // number of cards visible
 
 
 function dragging(e) {
@@ -15,22 +16,24 @@ function dragging(e) {
 document.addEventListener('mousemove', dragging);
 carousel.addEventListener('mousedown', (e) => {
     isDragging = true
-    startX = e.pageX;    
+    startX = e.pageX;
     currentScrollPos = carousel.scrollLeft;
 });
-document.addEventListener('mouseup', () => {isDragging = false});
+document.addEventListener('mouseup', () => { isDragging = false });
 
 carouselBtns.forEach(btn => {
     btn.addEventListener('click', e => {
-        carousel.scrollLeft += btn.id == 'left' ? -cardWidth * 2 : cardWidth * 2;
+        cardsInView = Math.round(carousel.offsetWidth / cardWidth);
+        carousel.scrollLeft += btn.id == 'left' ? -cardWidth * cardsInView : cardWidth * cardsInView;
     });
 });
 
 
 //infinite scroll
 
-let cardsInView = Math.round(carousel.offsetWidth / cardWidth); // number of cards visible
-
+// if you open the page on a screen larger than md breakpoint, 
+// making the size smaller will produce buggy result, 
+// and vice versa if opened in screen smaller than md.
 carouselCards.slice(-cardsInView).reverse().forEach(card => {
     carousel.insertAdjacentHTML('afterbegin', card.outerHTML);
 });
@@ -45,17 +48,26 @@ carousel.addEventListener('scroll', () => {
         carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
         carousel.classList.remove('no-smooth');
     }
-    else if(carousel.scrollLeft === carousel.scrollWidth - carousel.offsetWidth) {
+    else if (carousel.scrollLeft === carousel.scrollWidth - carousel.offsetWidth) {
         carousel.classList.add('no-smooth');
         carousel.scrollLeft = carousel.offsetWidth;
         carousel.classList.remove('no-smooth');
-      }
+    }
 });
 
 //autoplay
 carousel.addEventListener('mouseenter', () => isHovering = true);
 carousel.addEventListener('mouseleave', () => isHovering = false);
+carouselBtns.forEach(btn => {
+    btn.addEventListener('mouseenter', () => {
+        isHovering = true;
+    })
+    btn.addEventListener('mouseleave', () => {
+        isHovering = false;
+    })
+});
+
 
 setInterval(() => {
-    if(!isHovering) carousel.scrollLeft += cardsInView * cardWidth
+    if (!isHovering) carousel.scrollLeft += cardsInView * cardWidth
 }, 3000)

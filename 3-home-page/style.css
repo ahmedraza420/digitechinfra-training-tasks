@@ -23,9 +23,47 @@ h4 {
     font-size: calc(1.075rem + .5vw);
 }
 
-
 header {
-    top: 3rem;
+    top: 0;
+}
+
+/* header > nav.navbar {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto minmax(200px, 1fr);
+} */
+ 
+header > nav.navbar {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto 1fr;
+}
+
+
+#headerImageDiv {
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+    
+.top-bar {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.top-bar-text {
+    font-size: calc(0.5rem + 0.4vw);
+}
+
+.toggle-btn {
+    justify-self: end;
+    width: fit-content;
+    margin: 3vw;
+}
+
+#collapseNavBar {
+    position: absolute;
+    top: 100%;
+    width: 100%;
 }
 
 .cart {
@@ -59,8 +97,10 @@ header {
 
 .carousel-image {
     height: 100svh;
-    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    /* aspect-ratio: 3 / 2; */
 }
+
 
 .carousel-caption-img {
     filter: drop-shadow(0 0 1rem white);
@@ -156,9 +196,9 @@ header {
     background-size: cover;
 }
 
-/* .star {
-    padding-inline: 0;
-} */
+.star{
+    padding-inline: 0.3rem;
+}
 
 .feedback {
     background: center / cover no-repeat url(./images/feedback-bg.png);
@@ -181,7 +221,7 @@ header {
     padding-top: 2rem;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 2) - 1rem);
+    grid-auto-columns: 100%;
     gap: 2rem;
     cursor: grab;
 }
@@ -232,6 +272,52 @@ footer {
     background-repeat: no-repeat;
 }
 
+.footer-content {
+    max-width: 18rem;
+}
+
 .copyright {
     font-size: calc(0.6rem + 0.4vw);
+}
+
+@media only screen and (min-width: 768px) {
+    #collapseNavBar {
+        position: static;
+    }
+
+    .custom-carousel {
+        grid-auto-columns: calc((100% / 2) - 1rem);
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    header {
+        top: 3rem;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    #headerImageDiv {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .top-bar {
+        grid-column: 1 / -1;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .top-bar > div {
+        display: none;
+    }
+
+    .stats > div > div, .did > div, .promise, .promise > div, .promise > div > div {
+        padding-inline: 0;
+    }
+
+    .promise > div > div, .recent > div > div, .recent > div > div > div {
+        padding-inline: 0.5rem !important;
+    }
+
 }
