@@ -1,4 +1,55 @@
+
+:root {
+    --bg-primary-90:rgb(45, 56, 94, .9);
+    --bg-white-90: rgba(255, 255, 255, .92);
+    --c-custom: #2d385e;
+    --bg-custom: #4f77ff;
+}
+
 body {
-    padding: 0;
-    margin: 0;
+    min-height: 100svh;
+    background: #44525f url(./images/bg-4.webp) fixed no-repeat center / cover;
+}    
+
+h1, h2, h3, h4, h5 {
+    color: var(--c-custom);
+}
+
+.h-100-vh {
+    min-height: 100svh;
+}
+
+.bg-90 {
+    background-color: var(--bg-primary-90);
+}
+
+.bg-white-90 {
+    background-color: var(--bg-white-90);
+}
+
+.bg-custom {
+    background-color: var(--bg-custom);
+}
+
+.btn-custom {
+    background-color: var(--bg-custom);
+    color: white;
+    border-width: 0.1rem;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.btn-custom:hover {
+    background-color: var(--bg-custom);
+    color: white;
+    filter: brightness(85%);
+}
+
+.btn-custom:active {
+    color: var(--c-custom) !important;
+    border: 0.1rem solid var(--bg-custom) !important;
+}
+
+input::placeholder {
+    color: #888888 !important;
 }
