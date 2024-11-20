@@ -53,3 +53,7 @@ h1, h2, h3, h4, h5 {
 input::placeholder {
     color: #888888 !important;
 }
+
+.login-page form {
+    max-width: 25rem;
+}
