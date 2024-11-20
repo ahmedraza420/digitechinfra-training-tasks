@@ -265,7 +265,9 @@ header > nav.navbar {
     object-fit: cover;
     border-radius: 50%;
     width: auto;
-    height: 100%;
+    /* height: 100%; */
+    min-height: 1.5rem;
+    min-width: 1.5rem;
     aspect-ratio: 1 / 1;
 }
 
@@ -310,17 +312,25 @@ footer {
     }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 400px) {
     .top-bar > div {
         display: none;
     }
 
     .stats > div > div, .did > div, .promise, .promise > div, .promise > div > div {
-        padding-inline: 0;
+        padding-inline: 0 impr !important;
     }
 
     .promise > div > div, .recent > div > div, .recent > div > div > div {
         padding-inline: 0.5rem !important;
+    }
+
+    .tab-pane > div > div > div {
+        width: 100%;
+    }
+
+    .did-lists > div {
+        width: 100%;
     }
 
 }
