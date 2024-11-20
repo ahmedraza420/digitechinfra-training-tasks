@@ -24,7 +24,7 @@ document.addEventListener('mouseup', () => { isDragging = false });
 carouselBtns.forEach(btn => {
     btn.addEventListener('click', e => {
         cardsInView = Math.round(carousel.offsetWidth / cardWidth);
-        carousel.scrollLeft += btn.id == 'left' ? -cardWidth * cardsInView : cardWidth * cardsInView;
+        carousel.scrollLeft += btn.id == 'right' ? cardWidth * cardsInView : -cardWidth * cardsInView;
     });
 });
 
@@ -49,6 +49,7 @@ carousel.addEventListener('scroll', () => {
         carousel.classList.remove('no-smooth');
     }
     else if (carousel.scrollLeft === carousel.scrollWidth - carousel.offsetWidth) {
+        // console.log(carousel.scrollLeft, carousel.scrollWidth - carousel.offsetWidth);
         carousel.classList.add('no-smooth');
         carousel.scrollLeft = carousel.offsetWidth;
         carousel.classList.remove('no-smooth');

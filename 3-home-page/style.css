@@ -26,12 +26,6 @@ h4 {
 header {
     top: 0;
 }
-
-/* header > nav.navbar {
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: auto minmax(200px, 1fr);
-} */
  
 header > nav.navbar {
     display: grid;
@@ -141,6 +135,15 @@ header > nav.navbar {
     background-color: var(--bg-custom);
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
+}
+
+.availability svg {
+    height: 1rem;
+    min-height: 0.5rem;
+    min-width: 0.5rem;
+    padding-right: 0.5rem;
+    width: auto;
+    flex-shrink: 0;
 }
 
 .nav-pills {
