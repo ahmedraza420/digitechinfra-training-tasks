@@ -11,6 +11,10 @@ html {
     --text-custom-1: #1c6684;
 }
 
+* {
+    transition: all 0.3s;
+}
+
 p {
     font-size: calc(0.8rem + 0.3vw);
 }
@@ -181,10 +185,15 @@ header > nav.navbar {
 
 .card-bg-icon {
     position: absolute;
+    color: var(--text-custom-1);
     bottom: 0;
     right: 0;
     font-size: 7rem;
     opacity: 20%;
+}
+
+.recent-card {
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 0.05);
 }
 
 .recent-img {
