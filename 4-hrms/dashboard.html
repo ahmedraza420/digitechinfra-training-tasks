@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Dashboard | HRMS - Digitech Infra Associates</title>
+</head>
+
+<body class="dashboard">
+    <div class="contain d-flex">
+        <!-- sidebar -->
+        <aside id="sidebar" class="sidenav-expanded">
+            <div class="nab-brand position-sticky top-0 z-3">
+                <div class="business-logo d-flex align-items-center">
+                    <img src="./images/logo.png" alt="" class="col-4 img-fluid p-2">
+                    <h5 class="col-8 text-white text-nowrap mb-0 fw-normal description">HRMS - DigiTech</h5>
+                </div>
+            </div>
+            <div class="nav-user-wrapper d-flex gap-3 p-2">
+                <div class="nav-user-img-wrapper">
+                    <img src="./images/avatar.png" alt="" class="img-fluid">
+                </div>
+                <div class="nav-username-wrapper description">
+                    <p class="fw-medium text-white">Ahmed Raza</p>
+                    <small class="nav-user-status text-white"><i class="fa-solid fa-circle text-success"></i>
+                        Online</small>
+                </div>
+            </div>
+            <div class="nav-main text-secondary ps-3 py-2 bg-custom-3 description"><small>MAIN</small></div>
+            <ul class="nav sidenav flex-column link-custom fs-custom">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-gauge"></i>
+                        <span class="description">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-building"></i>
+                        <span class="description">Organization</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-regular fa-clock"></i>
+                        <span class="description">Timesheet</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span class="description">Training</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-cube"></i>
+                        <span class="description">Performance</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-ticket"></i>
+                        <span class="description">Tickets</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-regular fa-file-lines"></i>
+                        <span class="description">Files Manager</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-bars-progress"></i>
+                        <span class="description">Project Manager</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-regular fa-calendar-plus"></i>
+                        <span class="description">Events and Meetings</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="description">Logout</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidenav-sticky d-flex justify-content-evenly position-sticky bottom-0 bg-white text-info description">
+                <a href="#" class="nav-link">
+                    <span class="tooltip-custom" aria-label="Dashboard">Dashboard</span>
+                    <i class="fa-solid fa-gauge"></i>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="tooltip-custom" aria-label="Dashboard">My Profile</span>
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="tooltip-custom" aria-label="Dashboard">Sign Out</span>
+                    <i class="fa-solid fa-power-off"></i>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main section -->
+        <section class="main flex-grow-1">
+
+            <!-- Header -->
+            <header class="d-flex position-sticky top-0 justify-content-between z-3">
+                <button class="navbar-toggler mx-1 px-2" type="button"  aria-controls="sidebar"
+                        aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars text-white"></i>
+                </button>
+                <ul class="nav header-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-asterisk"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-brands fa-canadian-maple-leaf"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="./images/avatar.png" alt="" class="img-fluid user-image">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-gear fa-spin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Main -->
+            <section class="content p-3 d-flex flex-column row-gap-3">
+                <!-- Leave -->
+                <section class="leave">
+                    <button class="btn leave-btn d-flex bg-white p-3 shadow-sm">
+                        <div class="leave-img">
+                            <i class="fa-regular fa-calendar-days text-white"></i>
+                        </div>
+                        <span class="px-3 fw-light text-secondary">Management Leave</span>
+                    </button>
+                </section>
+
+                <!-- Profile -->
+                <section class="row profile row-gap-3">
+                    <div class="col-12 col-xl-4">
+                        <div class="attendance bg-white shadow-sm">
+                            <ul class="nav nav-tabs row mx-0 text-nowrap text-center fs-custom" role="tablist">
+                                <li class="col-12 col-sm-6 nav-item px-0">
+                                    <a href="#mark" class="nav-link w-100 p-0 rounded-0 active" data-bs-toggle="tab">
+                                        <p>Mark <small>Attendance</small></p>
+                                    </a>
+                                </li>
+                                <li class="col-12 col-sm-6 nav-item px-0">
+                                    <a href="#overview" class="nav-link w-100 p-0 rounded-0" data-bs-toggle="tab">
+                                        <p>Attendance <small>Overview</small></p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content p-2">
+                                <div id="mark" class="tab-pane active show">
+                                    <div class="designation p-3 mb-5">
+                                        <h4>Ahmed Raza</h4>
+                                        <p class="fs-custom fw-medium">Web Developer Trainee</p>
+                                        <img src="./images/avatar.png" alt="user's avatar">
+                                    </div>
+                                    <p class="fs-custom fw-light text-center">Last Login: Nov-21-2024 12:55 pm</p>
+                                    <p class="fs-custom fw-light text-center">My Office Shift: 09:00 am to 06:00 pm</p>
+                                    <div class="d-flex justify-content-center">
+                                        <button id="clockIn" class="btn shadow mx-1 my-3 disabledd"><i class="fa-solid fa-circle-arrow-right"></i> Clock In</button>
+                                        <button id="clockOut" class="btn shadow mx-1 my-3"><i class="fa-solid fa-circle-arrow-left"></i> Clock Out</button>
+                                    </div>
+                                </div>
+                                <div id="overview" class="tab-pane fade p-3">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th class="col text-center" colspan="2">This Month</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Total Present</th>
+                                                <td>5</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Total Absent</th>
+                                                <td>10</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Total Leave</th>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-center" colspan="2"><a href="#" class="text-custom-1">View
+                                                        attendance calendar</a></th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-8">
+                        <div class="tasks bg-white shadow-sm">
+                            <h4 class="p-3 text-dark-2">My Tasks</h4>
+                            <div class="tasks-body p-3 text-nowrap overflow-auto">
+                                <table class="table fs-custom">
+                                    <thead>
+                                        <tr>
+                                            <th class="col">Action</th>
+                                            <th class="col">Title</th>
+                                            <th class="col">End Date</th>
+                                            <th class="col">Status</th>
+                                            <th class="col">Progress</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects, Recr. Timeline -->
+                <section class="row projects-wrapper row-gap-3">
+                    <div class="col-12 col-xl-8">
+                        <div class="projects bg-white shadow-sm p-3">
+                            <h4 class="text-dark-2">My Projects</h4>
+                            <p class="fs-custom pt-4 pb-2">My assigned projects. <a href="#" class="text-custom-1">More Projects</a></p>
+                            <div class="tasks-body p-1 pt-1 text-nowrap overflow-auto">
+                                <table class="table fs-custom">
+                                    <thead>
+                                        <tr>
+                                            <th class="col">Action</th>
+                                            <th class="col">Title</th>
+                                            <th class="col">End Date</th>
+                                            <th class="col">Status</th>
+                                            <th class="col">Progress</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <div class="timeline bg-white shadow-sm p-3">
+                            <h4>Recruitment Timeline</h4>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Calendar -->
+                <section class="row calendar-wrapper row-gap-3">
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <div class="draggables-wrapper p-3 bg-white shadow-sm">
+                            <h4 class="text-dark-2 p-2">Draggable Options</h4>
+                            <div class="draggables d-flex flex-column fs-custom">
+                                <div class="holidays draggable user-select-none"><i class="fa-solid fa-shuttle-space"></i> HOLIDAYS</div>
+                                <div class="leave draggable user-select-none"><i class="fa-solid fa-envelope"></i> LEAVE REQUESTS</div>
+                                <div class="trainings draggable user-select-none"><i class="fa-solid fa-graduation-cap"></i> TRAININGS</div>
+                                <div class="projects draggable user-select-none"><i class="fa-solid fa-square-pen"></i> PROJECTS</div>
+                                <div class="tasks draggable user-select-none"><i class="fa-solid fa-bars-progress"></i> TASKS</div>
+                                <div class="events draggable user-select-none"><i class="fa-solid fa-calendar-plus"></i> EVENTS</div>
+                                <div class="meetings draggable user-select-none"><i class="fa-solid fa-calendar-check"></i> MEETINGS</div>
+                                <div class="birthdays draggable user-select-none"><i class="fa-solid fa-gift"></i> UPCOMING BIRTHDAY</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <div class="calendar p-3 bg-white shadow-sm">
+                            <div class="calendar-header d-flex flex-wrap gap-3 mb-3 align-items-center justify-content-evenly">
+                                <div>
+                                    <button class="btn btn-custom-1 shadow-sm py-1 px-2 disabled">today</button>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <button class="btn btn-custom-1 shadow-sm p-1 px-2 month-nav-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                                    <h2 class="month-name fw-regular text-center">November 2024</h2>
+                                    <button class="btn btn-custom-1 shadow-sm p-1 px-2 month-nav-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                                </div>
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <button class="btn btn-custom-1 py-1">month</button>
+                                    <button class="btn btn-custom-1 py-1">week</button>
+                                    <button class="btn btn-custom-1 py-1">day</button>
+                                    <button class="btn btn-custom-1 py-1">list week</button>
+                                </div>
+                            </div>
+                            <div class="calendar-body">
+                                <table class="table fs-custom" id="calendar">
+                                    <thead>
+                                        <tr>
+                                            <th class="col">Sun</th>
+                                            <th class="col">Mon</th>
+                                            <th class="col">Tue</th>
+                                            <th class="col">Wed</th>
+                                            <th class="col">Thu</th>
+                                            <th class="col">Fri</th>
+                                            <th class="col">Sat</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="1" data-current="false">27</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="2" data-current="false">28</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="3" data-current="false">29</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="4" data-current="false">30</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="5" data-current="false">31</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="6" data-current="true">1</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="7" data-current="true">2</a></div><div class="td-body"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="8" data-current="true">3</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="9" data-current="true">4</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="10" data-current="true">5</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="11" data-current="true">6</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="12" data-current="true">7</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="13" data-current="true">8</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="14" data-current="true">9</a></div><div class="td-body"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="15" data-current="true">10</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="16" data-current="true">11</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="17" data-current="true">12</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="18" data-current="true">13</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="19" data-current="true">14</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="20" data-current="true">15</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="21" data-current="true">16</a></div><div class="td-body"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="22" data-current="true">17</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="23" data-current="true">18</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="24" data-current="true">19</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="25" data-current="true">20</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="26" data-current="true">21</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="27" data-current="true">22</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="28" data-current="true">23</a></div><div class="td-body"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="29" data-current="true">24</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="30" data-current="true">25</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="31" data-current="true">26</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="32" data-current="true">27</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="33" data-current="true">28</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="34" data-current="true">29</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="35" data-current="true">30</a></div><div class="td-body"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="36" data-current="false">1</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="37" data-current="false">2</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="38" data-current="false">3</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="39" data-current="false">4</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="40" data-current="false">5</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="41" data-current="false">6</a></div><div class="td-body"></div></td>
+                                            <td><div class="td-head-wrapper"><a class="td-head w-100" data-index="42" data-current="false">7</a></div><div class="td-body"></div></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <h6 class="copyright text-white ps-3 fw-bold fs-custom">2024 © Digitech Infra Associates v1.1.5</h6>
+            </footer>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    </script>
+</body>
+
+</html>
