@@ -1,4 +1,5 @@
 body {
+    padding-top: 0.1px;
     min-height: 100svh;
     min-width: 100svw;
     background: url(./images/bg-4.webp) no-repeat center/cover;
@@ -9,9 +10,28 @@ body {
 }
 
 .login-wrapper {
+    position: relative;
+    top: -40rem;
+    opacity: 0;
+    scale: 0;
+    margin: 7% auto;
     padding: 1.25rem;
     width: 22.5rem;
-    margin: 7% auto;
+    animation: slideIn 1.5s forwards;
+}
+
+@keyframes slideIn {
+    50% {
+        opacity: 0;
+        scale: 0;
+        top: -40rem;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+        top: 0;
+    }
 }
 
 .login-wrapper * {
