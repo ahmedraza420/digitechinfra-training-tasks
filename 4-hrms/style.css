@@ -254,7 +254,7 @@ body.dashboard>div {
 }
 
 .nav-user-wrapper {
-    background: url(./images/user-bg.webp);
+    background: url(./images/user-bg.webp) no-repeat;
 }
 
 .nav-user-img-wrapper img {
@@ -468,6 +468,10 @@ header {
     cursor: auto;
 }
 
+.attendance .nav-tabs li:has(.active) {
+    filter: brightness(85%);
+}
+
 .attendace .nav-tabs li:hover a {
     color: #999;
 }
@@ -511,17 +515,14 @@ header {
     background-color: var(--bg-danger);
 }
 
-#clockIn.disabledd {
-    filter: brightness(60%);
-    box-shadow: 0 0.1rem 0.7rem rgb(0 0 0 / 0.3) !important;
-    scale: 0.9;
-    cursor: not-allowed;
+#clockIn:hover, #clockOut:hover {
+    filter: brightness(90%);
 }
 
-#clockOut.disabled {
-    filter: brightness(60%);
+#clockIn.disabled, #clockOut.disabled {
+    filter: brightness(70%);
     box-shadow: 0 0.1rem 0.7rem rgb(0 0 0 / 0.3) !important;
-    scale: 0.9;
+    scale: 0.95;
     cursor: not-allowed;
 }
 

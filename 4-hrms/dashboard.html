@@ -20,14 +20,14 @@
 <body class="dashboard position-relative">
     <!-- <div class="contain position-relative"> -->
         <!-- sidebar -->
-        <aside id="sidebar" class="collapsed-sm">
+        <aside id="sidebar" class="collapsed-sm d-flex flex-column">
             <div class="nav-brand position-sticky top-0">
                 <div class="business-logo d-flex align-items-center">
                     <img src="./images/logo.png" alt="" class="col-4 img-fluid p-2">
                     <h5 class="col-8 text-white text-nowrap mb-0 fw-normal description-block">HRMS - DigiTech</h5>
                 </div>
             </div>
-            <div class="sidebar-content h-100">
+            <div class="sidebar-content h-100 d-flex flex-column">
                 <div class="nav-user-wrapper d-flex gap-3 p-2">
                     <div class="nav-user-img-wrapper">
                         <img src="./images/avatar.png" alt="" class="img-fluid">
@@ -298,8 +298,8 @@
                                     <p class="fs-custom fw-light text-center">Last Login: Nov-21-2024 12:55 pm</p>
                                     <p class="fs-custom fw-light text-center">My Office Shift: 09:00 am to 06:00 pm</p>
                                     <div class="d-flex justify-content-center flex-wrap my-2">
-                                        <button id="clockIn" class="btn shadow mx-1 my-2 disabledd"><i class="fa-solid fa-circle-arrow-right"></i> Clock In</button>
-                                        <button id="clockOut" class="btn shadow mx-1 my-2"><i class="fa-solid fa-circle-arrow-left"></i> Clock Out</button>
+                                        <button id="clockIn" class="btn shadow text-white mx-1 my-2 disabled"><i class="fa-solid fa-circle-arrow-right"></i> Clock In</button>
+                                        <button id="clockOut" class="btn shadow text-white mx-1 my-2"><i class="fa-solid fa-circle-arrow-left"></i> Clock Out</button>
                                     </div>
                                 </div>
                                 <div id="overview" class="tab-pane fade p-3">
