@@ -1,7 +1,5 @@
 body {
     padding-top: 0.1px;
-    min-height: 100svh;
-    min-width: 100svw;
     background: url(./images/bg-4.webp) no-repeat center/cover;
 }
 

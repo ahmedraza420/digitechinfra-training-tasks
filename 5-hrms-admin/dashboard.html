@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,262 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <title>Dashboard | HRMS - Digitech Infra Associates</title>
 </head>
-<body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<body>
+    <div class="dashboard">
+        <!-- Header -->
+        <header class="position-sticky top-0 justify-content-between">
+            <a href="#" class="brand-logo">
+                <img src="./images/signin_logo.webp" alt="" class="">
+            </a>
+            <button class="navbar-toggler me-auto px-3" id="navbarToggler" type="button" aria-controls="sidebar"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars text-white"></i>
+            </button>
+            <ul class="nav header-nav ms-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-regular fa-bell"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-star-of-life"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-brands fa-canadian-maple-leaf"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <img src="./images/avatar.png" alt="" class="header-user-image">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-gear fa-spin"></i>
+                    </a>
+                </li>
+            </ul>
+        </header>
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="collapsed-sm d-flex flex-column align-items-stretch z-1 shadow">
+            <div class="sidebar-user-wrapper">
+                <img src="./images/avatar.png" alt="">
+                <p class="user-name sidebar-desc">Ahtisham Saeed</p>
+                <div class="d-flex sidebar-user-options">
+                    <a href=""><i class="fa-solid fa-user sidebar-desc"></i></a>
+                    <a href=""><i class="fa-solid fa-gear sidebar-desc"></i></a>
+                    <a href=""><i class="fa fa-power-off sidebar-desc"></i></a>
+                </div>
+            </div>
+            <div class="d-block sidebar-header sidebar-desc"><small>MAIN</small></div>
+            <ul class="nav sidebar-nav d-flex flex-column">
+                <li class="nav-item active">
+                    <button class="nav-btn"><i class="fa fa-dashboard"></i><span
+                            class="d-inline sidebar-desc">Dashboard</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa-solid fa-user"></i><span
+                            class="d-inline sidebar-desc">Staff</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa fa-futbol"></i><span class="d-inline sidebar-desc">Core
+                            HR</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa fa-building"></i><span
+                            class="d-inline sidebar-desc">Organization</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa-solid fa-calculator"></i><span
+                            class="d-inline sidebar-desc">Payroll</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa-solid fa-graduation-cap"></i><span
+                            class="d-inline sidebar-desc">Training</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa-solid fa-cube"></i><span
+                            class="d-inline sidebar-desc">Performance</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa-solid fa-calendar-days"></i><span
+                            class="d-inline sidebar-desc">HR Calendar</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa-solid fa-ticket"></i><span
+                            class="d-inline sidebar-desc">Tickets</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa-regular fa-newspaper"></i><span
+                            class="d-inline sidebar-desc">Recruitment</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa-regular fa-file-lines"></i><span
+                            class="d-inline sidebar-desc">Files Manager</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa fa-bars-progress"></i><span
+                            class="d-inline sidebar-desc">Project Manager</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa-regular fa-money-bill-1"></i><span
+                            class="d-inline sidebar-desc">Finance</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa-solid fa-flask"></i><span
+                            class="d-inline sidebar-desc">Assets</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa-regular fa-calendar-plus"></i><span
+                            class="d-inline sidebar-desc">Events & Meetings</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa-solid fa-chart-column"></i><span
+                            class="d-inline sidebar-desc">HR Reports</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa-solid fa-gear"></i><span
+                            class="d-inline sidebar-desc">System</span></button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-btn"><i class="fa-solid fa-right-from-bracket"></i> <span
+                            class="d-inline sidebar-desc">Logout</span></button>
+                </li>
+
+            </ul>
+            <div class="sidebar-sticky d-flex justify-content-evenly position-sticky bottom-0 text-info sidebar-desc">
+                <a href="#">
+                    <span class="tooltip-custom" aria-label="Dashboard">Dashboard</span>
+                    <i class="fa-solid fa-gear fa-spin"></i>
+                </a>
+                <a href="#">
+                    <span class="tooltip-custom" aria-label="Dashboard">My Profile</span>
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <a href="#">
+                    <span class="tooltip-custom" aria-label="Dashboard">Sign Out</span>
+                    <i class="fa-solid fa-power-off"></i>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <section class="main d-flex flex-column">
+            <div class="greeting-wrapper">
+                <h3 class="greeting">Welcome back, Ahtisham Saeed!</h3>
+                <p class="greeting-date">Today is <span id="date-announce">Sunday, 24 November 2024</span></p>
+            </div>
+
+            <!-- Row 1 -->
+            <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-4">
+                <div class="row-child">
+                    <div class="row1 bg-white shadow">
+                        <a href="#" class="main-link">
+                            <button class="main-btn row1-btn d-flex w-100 align-items-center text-start">
+                                <div class="row1-img employees">
+                                    <i class="fa-solid fa-users text-white"></i>
+                                </div>
+                                <div class="row1-content d-flex flex-column">
+                                    <span class="fw-light text-secondary"><span id="employeeNum">65</span> Employees</span>
+                                    <span class="span-bold d-flex gap-1 flex-wrap"><span class="badge badge-info">Active 30</span><span class="badge badge-danger">Inactive 35</span></span>
+                                </div>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="row-child">
+                    <div class="row1 bg-white shadow">
+                        <a href="#" class="main-link">
+                            <button class="main-btn row1-btn d-flex w-100 align-items-center text-start">
+                                <div class="row1-img roles">
+                                    <i class="fa-solid fa-lock text-white"></i>
+                                </div>
+                                <div class="row1-content d-flex flex-column">
+                                    <span class="fw-light text-secondary">Roles</span>
+                                    <span class="span-bold">Permission</span>
+                                </div>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="row-child">
+                    <div class="row1 bg-white shadow">
+                        <a href="#" class="main-link">
+                            <button class="main-btn row1-btn d-flex w-100 align-items-center text-start">
+                                <div class="row1-img leave">
+                                    <i class="fa-regular fa-calendar-days text-white"></i>
+                                </div>
+                                <div class="row1-content d-flex flex-column">
+                                    <span class="fw-light text-secondary">Leave</span>
+                                    <span class="span-bold">Management</span>
+                                </div>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="row-child">
+                    <div class="row1 bg-white shadow">
+                        <a href="#" class="main-link">
+                            <button class="main-btn row1-btn d-flex w-100 align-items-center text-start">
+                                <div class="row1-img hr">
+                                    <i class="fa-solid fa-gear text-white"></i>
+                                </div>
+                                <div class="row1-content d-flex flex-column">
+                                    <span class="fw-light text-secondary">HR Sale</span>
+                                    <span class="span-bold">Settings</span>
+                                </div>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Row 2 -->
+             <div class="row row-cols-lg-2">
+                 <div class="row-child">
+                     <div class="bg-white shadow"></div>
+                 </div>
+                 <div class="row-child">
+                     <div class="bg-white shadow"></div>
+                 </div>
+            </div>
+
+            <!-- Row 3 -->
+             <div class="row row-cols-lg-3">
+                <div class="row-child">
+                    <div class="bg-white shadow"></div>
+                </div>
+                <div class="row-child">
+                    <div class="bg-white shadow"></div>
+                </div>
+                <div class="row-child">
+                    <div class="bg-white shadow"></div>
+                </div>
+             </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

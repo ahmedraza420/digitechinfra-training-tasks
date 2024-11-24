@@ -2,7 +2,13 @@
     --fs-custom: 14px;
     --c-custom: #666;
     --bg-custom: #0177bc;
+    --bg-secondary: white;
     --bg-disable: #337ab7;
+}
+
+body {
+    min-height: 100svh;
+    /* min-width: 100svw; */
 }
 
 .fs-custom {
