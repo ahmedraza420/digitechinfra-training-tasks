@@ -8,6 +8,8 @@
     --header-min-height: 3.125rem;
     --header-max-height: 6.25rem; 
     --bs-box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.05);
+    --calendar-cell-min-width: 5rem;
+    --calendar-cell-min-height: 4rem;
 }
 
 body {
@@ -120,23 +122,32 @@ body {
         padding: 0.1875rem 0.3125rem;
     }
 
-    .sidebar-nav > .nav-item > .nav-btn {
+    .sidebar-nav > .nav-item a {
+        display: block;
+        /* width: 100%; */
+        text-decoration: none;
+        color: var(--c-secondary);
+        line-height: 1.5;
+    }
+    
+    .sidebar-nav > .nav-item > a > .nav-btn {
+        position: relative;
         border: 0;
         border-radius: 5px;
         padding: 0.625rem 0.3125rem 0.625rem 0.5rem;
         width: 100%;
         background-color: transparent;
-        color: var(--c-secondary);
+        color: inherit;
         font-size: var(--fs-custom);
         text-align: start;
     }
 
-    .sidebar-nav > .nav-item.active > .nav-btn, .sidebar-nav > .nav-item > .nav-btn:hover {
+    .sidebar-nav > .nav-item.active > a > .nav-btn, .sidebar-nav > .nav-item > a > .nav-btn:hover {
         background-color: var(--bg-custom);
         color: white;
     }
 
-    .sidebar-nav > .nav-item > .nav-btn > i {
+    .sidebar-nav > .nav-item > a > .nav-btn > i {
         margin-right: 0.625rem;
         width: 1.9375rem;
         font-size: 1rem;
@@ -145,6 +156,49 @@ body {
 
     .fa-ticket {
         transform: rotate(-45deg);
+    }
+
+    .sub-item:has(.sub-item) a {
+        position: relative;
+    }
+
+    .sub-item:has(.sub-item) .fa-angle-left {
+        margin-right: 0;
+    }
+
+    .fa-angle-left {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-right: calc(var(--fs-custom) * 1.25);
+        font-size: calc(var(--fs-custom) * 0.8);
+        transform: translateY(-50%);
+        transition: transform 0.4s;
+    }
+
+    .sub-menu {
+        list-style-type: none;
+        padding-left: 0.3125rem;
+        margin-inline: 0.1rem;
+    }
+
+    .sub-menu .sub-menu {
+        padding-left: 0.625rem;
+    }
+
+    .sub-menu a {
+        padding: 0.625rem 0.3125rem 0.5rem 0.9375rem;
+        font-size: var(--fs-custom);
+        /* font-weight: 400; */
+        transition: color 0.3s;
+    }
+
+    .sub-menu .sub-item:hover > a{
+        color: var(--bg-custom);
+    }
+
+    .sub-menu i {
+        width: 1.25rem;
     }
 
     .sidebar-sticky {
@@ -319,6 +373,38 @@ body {
             padding: 0.9375rem;
         }
 
+        .row2 h5 {
+            padding-bottom: 0.9375rem;
+        }
+
+        .row2 .row {
+            margin-right: 0;
+            row-gap: 0.9375rem;
+        }
+
+        .employees-depart-list, .employees-desig-list {
+            overflow: auto;
+            text-overflow: ellipsis;
+            height: 12.5rem;
+        }
+
+        .color-box {
+            /* height: 0.3125rem;
+            width: 0.3125rem; */
+            height: 0.625rem;
+            width: 0.625rem;
+            background-color: #5b626b;
+        }
+
+        .row2 .table tr > td {
+            padding: 0.46875rem;   
+            vertical-align: middle;
+            color: var(--c-primary);
+            line-height:  1.42857143;
+            font-weight: 400;
+            font-size: var(--fs-custom);
+        }
+
         /* #endregion */
 
         /* #region Row3 */
@@ -337,7 +423,7 @@ body {
         }
 
         .total-tickets i {
-            color: #8a67d2;
+            color: #666EE8;
         }
 
         .open-tickets i {
@@ -383,6 +469,10 @@ body {
             color: #00c0ef;
         }
 
+        .draggable.travel {
+            color: #3c8dbc;
+        }
+
         .draggable.trainings {
             color: #f39c12;
         }
@@ -401,6 +491,10 @@ body {
 
         .draggable.meetings {
             color: #39cccc;
+        }
+        
+        .draggable.goals {
+            color: #3c8dbc;
         }
 
         .draggable.birthdays {
@@ -431,12 +525,32 @@ body {
             table-layout: fixed;
         }
 
+        .calendar .calendar-body {
+            position: relative;
+            overflow: auto;
+            max-height: 43.75rem;
+        }
+        .calendar tr {
+            display: flex;
+        }
+        
+        #calendar table td {
+            min-height: var(--calendar-cell-min-height);
+        }
+        
+        #calendar thead {
+            z-index: 2;
+            position: sticky;
+            top: 0;
+        }
+
         #calendar th,
         #calendar td {
+            flex: 1 0 var(--calendar-cell-min-width);
             border-width: var(--bs-border-width);
             padding-top: 0;
         }
-
+        
         #calendar .td-body {
             min-height: 40px;
         }
@@ -471,10 +585,15 @@ body {
         /* #region Row5 */
         .row5 {
             padding: 1.5625rem;
+            height: 100%;
         }
         
         .row5 > div {
             gap: 1.5625rem;
+        }
+
+        .row5-content {
+            flex-wrap: wrap-reverse;
         }
 
         .row5 i {
@@ -506,6 +625,7 @@ body {
 
         /* #region Footer */
         footer {
+            z-index: 5;
             margin-inline: calc(-1 * 0.9375rem);
             border-top: 1px solid #d2d6de;
             padding-block: 1rem;
