@@ -53,9 +53,17 @@ body {
         align-items: center;
     }
 
+    header .nav-item:hover, .navbar-toggler:hover {
+        background-color: var(--bg-custom-hovered);
+    }
+
     header .nav-link {
         color: white;
         font-size: var(--fs-custom);
+    }
+
+    header .nav-link:hover, header .nav-link:focus {
+        color: white;
     }
 
     .header-user-image {
@@ -67,6 +75,7 @@ body {
 
     /* #region SIDEBAR */
     #sidebar {
+        z-index: 5;
         grid-row: 2 / -1;
         grid-column: 1;
         min-height: calc(100svh - var(--header-min-height));
@@ -625,7 +634,7 @@ body {
 
         /* #region Footer */
         footer {
-            z-index: 5;
+            z-index: 2;
             margin-inline: calc(-1 * 0.9375rem);
             border-top: 1px solid #d2d6de;
             padding-block: 1rem;
