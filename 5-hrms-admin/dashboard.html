@@ -23,7 +23,7 @@
         <!-- Header -->
         <header class="position-sticky top-0 justify-content-between">
             <a href="#" class="brand-logo">
-                <img src="./images/signin_logo.webp" alt="" class="">
+                <img src="./images/signin_logo.webp" alt="" class="" id="brandLogo">
             </a>
             <button class="navbar-toggler me-auto px-3 py-2" id="navbarToggler" type="button" aria-controls="sidebar"
                 aria-label="Toggle navigation">
@@ -74,191 +74,202 @@
                     <a href=""><i class="fa fa-power-off sidebar-desc"></i></a>
                 </div>
             </div>
-            <div class="d-block sidebar-header sidebar-desc"><small>MAIN</small></div>
+            <div class="sidebar-header sidebar-desc"><small>MAIN</small></div>
             <ul class="nav sidebar-nav d-flex flex-column">
                 <li class="nav-item active">
                     <a href="#">
-                        <button class="nav-btn"><i class="fa fa-dashboard"></i><span class="d-inline sidebar-desc">Dashboard</span>
+                        <button class="nav-btn"><i class="fa fa-dashboard"></i><span class="sidebar-desc">Dashboard</span>
                         </button>
                     </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                         <button class="nav-btn"><i class="fa-solid fa-user"></i>
-                            <span class="d-inline sidebar-desc">Staff <i class="fa-solid fa-angle-left"></i></span>
+                            <span class="sidebar-desc">Staff <i class="fa-solid fa-angle-left"></i></span>
                         </button>
                     </a>
                     <ul class="sub-menu">
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Employees</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Roles & Priviledges</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Custom Fields</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Staff Directory</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Import Employees</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Employees Exit</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Expired Documents</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Employees Last Login</a></li>
+                        <span class="sub-menu-header">Staff</span>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Employees</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Roles & Priviledges</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Custom Fields</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Staff Directory</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Import Employees</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Employees Exit</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Expired Documents</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Employees Last Login</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa fa-futbol"></i>
-                        <span class="d-inline sidebar-desc">Core HR <i class="fa-solid fa-angle-left"></i></span>
+                        <span class="sidebar-desc">Core HR <i class="fa-solid fa-angle-left"></i></span>
                     </button>
                     </a>
                     <ul class="sub-menu">
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Awards</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Transfers</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Resignations</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Travels</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Promotions</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> complaints</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Warnings</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Testimonials</a></li>
+                        <span class="sub-menu-header">Core HR</span>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Awards</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Transfers</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Resignations</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Travels</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Promotions</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> complaints</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Warnings</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Testimonials</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa fa-building"></i>
-                        <span class="d-inline sidebar-desc">Organization <i class="fa-solid fa-angle-left"></i></span>
+                        <span class="sidebar-desc">Organization <i class="fa-solid fa-angle-left"></i></span>
                     </button>
                     </a>
                     <ul class="sub-menu">
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Company</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Official Documents</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Location</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Department</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Designation</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Announcements</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Company Policy</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Organization Chart</a></li>
+                        <span class="sub-menu-header">Organization</span>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Company</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Official Documents</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Location</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Department</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Designation</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Announcements</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Company Policy</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Organization Chart</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa-regular fa-clock"></i>
-                        <span class="d-inline sidebar-desc">Timesheet <i class="fa-solid fa-angle-left"></i></span>
+                        <span class="sidebar-desc">Timesheet <i class="fa-solid fa-angle-left"></i></span>
                     </button>
                     </a>
                     <ul class="sub-menu">
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Attendance</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Monthly Timesheet</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Timesheet Calendar</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Date wise Attendance</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Update Attendance</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Office Shifts</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Manage Holidays</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Manage Leaves</a></li>
+                        <span class="sub-menu-header">Timesheet</span>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Attendance</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Monthly Timesheet</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Timesheet Calendar</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Date wise Attendance</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Update Attendance</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Office Shifts</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Manage Holidays</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Manage Leaves</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa-solid fa-calculator"></i>
-                        <span class="d-inline sidebar-desc">Payroll <i class="fa-solid fa-angle-left"></i></span>
+                        <span class="sidebar-desc">Payroll <i class="fa-solid fa-angle-left"></i></span>
                     </button>
                     </a>
                     <ul class="sub-menu">
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Generate Payslip</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Payroll</a></li>
+                        <span class="sub-menu-header">Payroll</span>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Generate Payslip</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Payroll</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa-solid fa-graduation-cap"></i>
-                        <span class="d-inline sidebar-desc">Training <i class="fa-solid fa-angle-left"></i></span>
+                        <span class="sidebar-desc">Training <i class="fa-solid fa-angle-left"></i></span>
                     </button>
                     </a>
                     <ul class="sub-menu">
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Training List</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Training Type</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Trainers List</a></li>
+                        <span class="sub-menu-header">Training</span>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Training List</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Training Type</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Trainers List</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa-solid fa-cube"></i>
-                        <span class="d-inline sidebar-desc">Performance <i class="fa-solid fa-angle-left"></i></span>
+                        <span class="sidebar-desc">Performance <i class="fa-solid fa-angle-left"></i></span>
                     </button>
                     </a>
                     <ul class="sub-menu">
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Indicator</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Appraisal</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> KPI</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> KPI Report</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Goal Tracking</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Goal Type</a></li>
+                        <span class="sub-menu-header">Performance</span>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Indicator</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Appraisal</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> KPI</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> KPI Report</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Goal Tracking</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Goal Type</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa-solid fa-calendar-days"></i>
-                        <span class="d-inline sidebar-desc">HR Calendar</span>
+                        <span class="sidebar-desc">HR Calendar</span>
                     </button>
                     </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa-solid fa-ticket"></i>
-                        <span class="d-inline sidebar-desc">Tickets</span>
+                        <span class="sidebar-desc">Tickets</span>
                     </button>
                     </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa-regular fa-newspaper"></i>
-                        <span class="d-inline sidebar-desc">Recruitment <i class="fa-solid fa-angle-left"></i></span>
+                        <span class="sidebar-desc">Recruitment <i class="fa-solid fa-angle-left"></i></span>
                     </button>
                     </a>
                     <ul class="sub-menu">
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Job Posts</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Job Candidates</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Employer</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> CMS Pages</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Files Manager</a></li>
+                        <span class="sub-menu-header">Recruitment</span>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Job Posts</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Job Candidates</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Employer</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> CMS Pages</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Files Manager</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa-regular fa-file-lines"></i>
-                        <span class="d-inline sidebar-desc">Files Manager</span>
+                        <span class="sidebar-desc">Files Manager</span>
                     </button>
                     </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa fa-bars-progress"></i>
-                        <span class="d-inline sidebar-desc">Project Manager <i class="fa-solid fa-angle-left"></i></span>
+                        <span class="sidebar-desc">Project Manager <i class="fa-solid fa-angle-left"></i></span>
                     </button>
                     </a>
                     <ul class="sub-menu">
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Projects</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Tasks</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Clients</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Invoices</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Invoice Payments</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Tax Type</a></li>
+                        <span class="sub-menu-header">Project Manager</span>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Projects</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Tasks</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Clients</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Invoices</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Invoice Payments</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Tax Type</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa-regular fa-money-bill-1"></i>
-                        <span class="d-inline sidebar-desc">Finance <i class="fa-solid fa-angle-left"></i></span>
+                        <span class="sidebar-desc">Finance <i class="fa-solid fa-angle-left"></i></span>
                     </button>
                     </a>
                     <ul class="sub-menu">
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Accounts List</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Account Balances</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Payees</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Payers</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> New Deposit</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> New Expense</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Transfer</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> View Transactions</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Reports <i class="fa-solid fa-angle-left"></i></a>
+                        <span class="sub-menu-header">Finance</span>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Accounts List</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Account Balances</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Payees</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Payers</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> New Deposit</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> New Expense</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Transfer</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> View Transactions</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Reports <i class="fa-solid fa-angle-left"></i></a>
                             <ul class="sub-menu">
-                                <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Account Statement</a></li>
-                                <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Expense Report</a></li>
-                                <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Income Report</a></li>
-                                <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Transfer Report</a></li>
+                                <!-- <span class="sub-menu-header">Reports</span> -->
+                                <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Account Statement</a></li>
+                                <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Expense Report</a></li>
+                                <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Income Report</a></li>
+                                <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Transfer Report</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -266,67 +277,71 @@
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa-solid fa-flask"></i>
-                        <span class="d-inline sidebar-desc">Assets <i class="fa-solid fa-angle-left"></i></span>
+                        <span class="sidebar-desc">Assets <i class="fa-solid fa-angle-left"></i></span>
                     </button>
                     </a>
                     <ul class="sub-menu">
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Assets</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Category</a></li>
+                        <span class="sub-menu-header">Assets</span>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Assets</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Category</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa-regular fa-calendar-plus"></i>
-                        <span class="d-inline sidebar-desc">Events & Meetings <i class="fa-solid fa-angle-left"></i></span>
+                        <span class="sidebar-desc">Events & Meetings <i class="fa-solid fa-angle-left"></i></span>
                     </button>
                     </a>
                     <ul class="sub-menu">
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Events</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Meetings</a></li>
+                        <span class="sub-menu-header">Events & Meetings</span>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Events</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Meetings</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa-solid fa-chart-column"></i>
-                        <span class="d-inline sidebar-desc">HR Reports <i class="fa-solid fa-angle-left"></i></span>
+                        <span class="sidebar-desc">HR Reports <i class="fa-solid fa-angle-left"></i></span>
                     </button>
                     </a>
                     <ul class="sub-menu">
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Payslip Report</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Attendance Report</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Training Report</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Projects Report</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Tasks Report</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> User Roles Report</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Employees Report</a></li>
+                        <span class="sub-menu-header">HR Reports</span>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Payslip Report</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Attendance Report</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Training Report</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Projects Report</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Tasks Report</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> User Roles Report</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Employees Report</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa-solid fa-gear"></i>
-                        <span class="d-inline sidebar-desc">System <i class="fa-solid fa-angle-left"></i></span>
+                        <span class="sidebar-desc">System <i class="fa-solid fa-angle-left"></i></span>
                     </button>
                     </a>
                     <ul class="sub-menu">
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Multi Language</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Settings</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Setup Modules</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Theme Settings</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Payment Gateway</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Constants</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Database Backup</a></li>
-                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle-dot"></i> Email Templates</a></li>
+                        <span class="sub-menu-header">System</span>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Multi Language</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Settings</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Setup Modules</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Theme Settings</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Payment Gateway</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Constants</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Database Backup</a></li>
+                        <li class="sub-item"><a href="#"><i class="fa-regular fa-circle"></i> Email Templates</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#">
                     <button class="nav-btn"><i class="fa-solid fa-right-from-bracket"></i> 
-                        <span class="d-inline sidebar-desc">Logout</span>
+                        <span class="sidebar-desc">Logout</span>
                     </button>
                     </a>
                 </li>
             </ul>
-            <div class="sidebar-sticky d-flex justify-content-evenly position-sticky bottom-0 text-info sidebar-desc">
+            <div class="sidebar-sticky justify-content-evenly position-sticky bottom-0 text-info sidebar-desc">
                 <a href="#">
                     <span class="tooltip-custom" aria-label="Dashboard">Dashboard</span>
                     <i class="fa-solid fa-gear fa-spin"></i>
@@ -343,7 +358,7 @@
         </aside>
 
         <!-- Main -->
-        <section class="main d-flex flex-column">
+        <section class="main d-flex flex-column" id="main">
             <div class="greeting-wrapper">
                 <h3 class="greeting">Welcome back, Ahtisham Saeed!</h3>
                 <p class="greeting-date">Today is <span id="date-announce">Sunday, 24 November 2024</span></p>
@@ -740,6 +755,8 @@
         <div class="overlay"></div>
     </div>
 
+
+    <script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
