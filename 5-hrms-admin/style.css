@@ -1,7 +1,10 @@
 :root {
     --fs-custom: 14px;
     --c-custom: #666;
+    --c-custom-1: #3c8dbc;
+    --link-custom: #b8c7ce;
     --bg-custom: #0177bc;
+    --bg-custom-1: #4099ff;
     --bg-secondary: white;
     --bg-disable: #337ab7;
 }
@@ -13,6 +16,10 @@ body {
 
 .fs-custom {
     font-size: var(--fs-custom) !important;
+}
+
+.text-secondary {
+    color: var(--c-secondary);
 }
 
 .btn-custom {
@@ -38,3 +45,22 @@ body {
     filter: opacity(0.5);
 }
 
+.btn-custom-1 {
+    background-color: var(--bg-custom-1);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.btn-custom-1:hover {
+    filter: brightness(120%);
+}
+
+.btn-custom-1:active {
+    filter: brightness(80%);
+}
+
+.btn-custom-1[disabled] {
+    opacity: 0.5;
+}
