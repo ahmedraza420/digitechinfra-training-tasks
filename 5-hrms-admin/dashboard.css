@@ -145,7 +145,13 @@ body {
         line-height: 1.5;
     }
     
-    .sidebar-nav > .nav-item > a > .nav-btn {
+    .sidebar-nav > .nav-item .nav-btn {
+        text-decoration: none;
+        color: var(--c-secondary);
+        line-height: 1.5;
+    }
+
+    .sidebar-nav > .nav-item > a > .nav-btn, .sidebar-nav > .nav-item > .nav-btn, .sub-btn {
         position: relative;
         border: 0;
         border-radius: 5px;
@@ -155,18 +161,23 @@ body {
         align-items: center;
         /* justify-content: center; */
         background-color: transparent;
-        color: inherit;
+        /* color: inherit; */
         font-size: var(--fs-custom);
         text-align: start;
         transition: all 0.15s;;
     }
 
-    .sidebar-nav > .nav-item.active > a > .nav-btn, .sidebar-nav > .nav-item > a > .nav-btn:hover, .nav-item:has(.sub-menu:hover) .nav-btn {
+    .sidebar-nav > .nav-item.active > a > .nav-btn, 
+    .sidebar-nav > .nav-item > a > .nav-btn:hover, 
+    .nav-item:has(.sub-menu:hover) .nav-btn,
+    .sidebar-nav > .nav-item.active > .nav-btn, 
+    .sidebar-nav > .nav-item > .nav-btn:hover {
         background-color: var(--bg-custom);
         color: white;
     }
 
-    .sidebar-nav > .nav-item > a > .nav-btn > i {
+    .sidebar-nav > .nav-item > a > .nav-btn > i,
+    .sidebar-nav > .nav-item > .nav-btn > i {
         margin-right: 0.625rem;
         width: 1.9375rem;
         font-size: 1rem;
@@ -177,7 +188,7 @@ body {
         transform: rotate(-45deg);
     }
 
-    .sub-item:has(.sub-item) a {
+    .sub-item:has(.sub-item) a, .sub-item:has(.sub-item) .nav-btn, .sub-item:has(.sub-menu) .sub-btn {
         position: relative;
     }
 
@@ -196,10 +207,14 @@ body {
     }
 
     .sub-menu {
+        overflow: hidden;
         list-style-type: none;
         padding-left: 0.3125rem;
         margin-inline: 0.1rem;
-        display: none;
+        opacity: 0;
+        /* display: none; */
+        max-height: 0;
+        transition: all 0.3s ease;
     }
 
     .sub-menu-header {
@@ -223,13 +238,22 @@ body {
         /* font-weight: 400; */
         transition: color 0.3s;
     }
+    
+    .sub-btn {
+        padding: 0.625rem 0.3125rem 0.5rem 0.9375rem;
+        font-size: var(--fs-custom);
+        color: var(--c-secondary);
+        transition: color 0.3s;
+        border: none;
+        background-color: transparent;
+    }
 
     .sub-item a{
         display: flex !important;
         align-items: center;
     }
 
-    .sub-menu .sub-item:hover > a{
+    .sub-menu .sub-item:hover > a, .sub-menu .sub-item:hover .sub-btn{
         color: var(--bg-custom);
     }
 
@@ -282,20 +306,30 @@ body {
         transition: opacity 0.3s ease;
     }
         /* #region Sidebar Dropdown */
-        .dropdown.show .fa-angle-left {
+        .dropdown.show > .nav-btn > span > .fa-angle-left {
             /* margin-right: 0; */
             /* margin-bottom: calc(var(--fs-custom)* 1.25);  */
             transform: rotate(-90deg) translateX(100%);
         }
 
-        .dropdown.show > .sub-menu {
-            display: block;
+        .sub-dropdown.show > .sub-btn > .fa-angle-left {
+            transform: rotate(-90deg) translateX(50%);
         }
-        /* #regionend */
+
+        #sidebar:not(.collapsed) .dropdown.show > .sub-menu, .sub-dropdown.show > .sub-menu {
+            opacity: 1;
+            max-height: 100svh;
+            transition: all 0.3s ease;
+        }
+        /* #endregion */
 
         /* #region Sidebar Collapsed */
         #sidebar.collapsed .sidebar-desc {
             display: none !important;
+        }
+
+        #sidebar.collapsed .nav-item > .sub-menu {
+            display: none;
         }
         
         #sidebar.collapsed > ul > li > .sub-menu {
@@ -313,13 +347,15 @@ body {
             padding: 0;
         }
 
-        #sidebar.collapsed > ul > li > a > .nav-btn {
+        #sidebar.collapsed > ul > li > a > .nav-btn,
+        #sidebar.collapsed > ul > li > .nav-btn {
             border-radius: 0;
             padding-inline: 0;
             height: var(--nav-item-collapsed-height);
         }
 
-        #sidebar.collapsed > ul > li > a > .nav-btn > i {
+        #sidebar.collapsed > ul > li > a > .nav-btn > i,
+        #sidebar.collapsed > ul > li > .nav-btn > i {
             margin-inline: auto;
         }
 
@@ -329,7 +365,10 @@ body {
 
 
         #sidebar.collapsed > ul > li.nav-item:has(.sub-menu):hover > .sub-menu {
+            opacity: 1;
             display: block;
+            max-height: 100svh;
+            transition: all 0.3s ease;
         }
 
         #sidebar.collapsed > ul > li > .sub-menu {

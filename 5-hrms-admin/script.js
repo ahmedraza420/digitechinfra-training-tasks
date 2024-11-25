@@ -7,6 +7,7 @@ const sidebarDesc = document.querySelectorAll('.sidebar-desc'); // those element
 const brandLogo = document.querySelector('#brandLogo');
 const subMenus = document.querySelectorAll('.sub-menu');
 const dropdowns = document.querySelectorAll('.dropdown');
+const subDropdowns = document.querySelectorAll(".sub-dropdown");
 const main = document.querySelector("#main"); 
 // const rootStyles = getComputedStyle(root);
 
@@ -48,14 +49,32 @@ navbarBtn.addEventListener('click', () => {
 
 
 dropdowns.forEach(dropdown => {
+    // console.log(dropdown);
     dropdown.querySelector('.nav-btn').addEventListener('click', () => {
+        subDropdowns.forEach(subDropdown => subDropdown.classList.remove('show'));
         if (dropdown.classList.contains('show')) {
             dropdown.classList.remove('show');
             main.style.minHeight = `${sidebar.offsetHeight}px`;
         }
         else {
             dropdowns.forEach(dropdown => dropdown.classList.remove('show'));
+            // subDropdowns.forEach(subDropdown => subDropdown.classList.remove('show'));
             dropdown.classList.add('show');
+            main.style.minHeight = `${sidebar.offsetHeight}px`;
+            // console.log(sidebar.offsetHeight);
+        }
+    });
+});
+subDropdowns.forEach(subDropdown => {
+    subDropdown.addEventListener('click', () => {
+        if (subDropdown.classList.contains('show')) {
+            // console.log(subDropdowns, subDropdown.classList.contains('show'))
+            subDropdown.classList.remove('show');
+            main.style.minHeight = `${sidebar.offsetHeight}px`;
+        }
+        else {
+            subDropdowns.forEach(dropdown => subDropdown.classList.remove('show'));
+            subDropdown.classList.add('show');
             main.style.minHeight = `${sidebar.offsetHeight}px`;
             // console.log(sidebar.offsetHeight);
         }
