@@ -466,11 +466,6 @@ body {
         background-color: var(--bg-custom-white);
         /* transition: all 0.3s ease; */
     }
-    
-    /* .dashboard:has(#sidebar.collapsed) .main {
-        max-width: calc(100svw - var(--sidebar-collapsed-width));
-        transition: all 0.3s ease;
-    } */
 
     .row {
         row-gap: 1.25rem;
@@ -628,11 +623,16 @@ body {
         }
 
         .depart-chart-area, .desig-chart-area {
+            max-height: 12.5rem;
             display: flex;
             align-items: center;
             flex: 1 0 9rem;
         }
 
+        canvas {
+            max-height: inherit !important;
+            /* max-width: ; */
+        }
         /* #endregion */
 
         /* #region Row3 */
