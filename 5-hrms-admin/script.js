@@ -175,5 +175,14 @@ Array.from(headerNavDropdowns).forEach(headerNavDropdown => {
             // console.log(headerNavDropdown == navDropdown)
             if (navDropdown != headerNavDropdown) navDropdown.classList.remove('active')});
         headerNavDropdown.classList.toggle('active');
+        overlay.classList.toggle('visible');
+        if (overlay.classList.contains('visible')) {
+            overlay.style.backgroundColor = 'transparent';
+            overlay.addEventListener('click', () => {
+                overlay.style.backgroundColor = '';
+                overlay.classList.remove('visible');
+                headerNavDropdown.classList.remove('active');
+            }, {once: true});
+        }
     });
 });
