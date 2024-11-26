@@ -1,5 +1,9 @@
+const dashboard = document.querySelector('.dashboard');
 const navbarBtn = document.querySelector('#navbarToggler');
+const header = document.querySelector('#header');
 const sidebar = document.querySelector("#sidebar");
+const sidebar2 = document.querySelector('#sidebar2');
+const main = document.querySelector("#main"); 
 const overlay = document.querySelector('.overlay');
 const root = document.querySelector(':root');
 const navBtns = document.querySelectorAll(".nav-btn");
@@ -8,13 +12,14 @@ const brandLogo = document.querySelector('#brandLogo');
 const subMenus = document.querySelectorAll('.sub-menu');
 const dropdowns = document.querySelectorAll('.dropdown');
 const subDropdowns = document.querySelectorAll(".sub-dropdown");
-const main = document.querySelector("#main"); 
 const departments = Array.from(document.querySelectorAll('#employeesDepartmentTable tr'));
 const designations = Array.from(document.querySelectorAll("#employeesDesignationTable tr"));
 const submenuItems = sidebar.querySelectorAll('.sub-menu li');
-
+// const ThemeWrappers = sidebar2.querySelectorAll('.theme-wrapper');
+const themeContainer = sidebar2.querySelector('.themes-container');
 // header navigations
 const headerNavDropdowns = document.querySelectorAll('.nav-dropdown');
+const headerNavSidemenuBtn = document.querySelector('.nav-sidemenu');
 // const navUserProfile = document.querySelector('#navUserProfile');
 // const navUserLink = navUserProfile.querySelector('.nav-link');
 // const navCountriesList = document.querySelector('#navCountriesList');
@@ -49,14 +54,26 @@ navbarBtn.addEventListener('click', () => {
             }
             else {
                 root.style.setProperty('--sidebar-width', widthExp);
-                sidebar.classList.remove('collapsed');
+                // sidebar.classList.remove('collapsed');
+                sidebar.classList.add('expanding');
                 brandLogo.src = './images/signin_logo.webp';
+                sidebar.classList.remove('collapsed');
+                
+                setTimeout(function (){
+                    sidebar.classList.remove('expanding');
+                }, 300);
             }        
         }
         else { 
-            
-            sidebar.classList.toggle('collapsed-sm');
-            overlay.classList.toggle('visible');
+            if (sidebar.classList.contains('collapsed-sm')) {
+                sidebar.classList.remove('collapsed-sm');
+                overlay.classList.add('visible');
+                overlay.style.backgroundColor = '';
+            }
+            else {
+                sidebar.classList.add('collapsed-sm');
+                overlay.classList.remove('visible');
+            }
             overlay.addEventListener('click', () => {
                 sidebar.classList.add('collapsed-sm');
                 overlay.classList.remove('visible');
@@ -70,13 +87,16 @@ dropdowns.forEach(dropdown => {
         subDropdowns.forEach(subDropdown => subDropdown.classList.remove('show'));
         if (dropdown.classList.contains('show')) {
             dropdown.classList.remove('show');
-            main.style.minHeight = `${sidebar.offsetHeight}px`;
+            // main.style.minHeight = `${sidebar.offsetHeight}px`;
+            main.style.minHeight = '';
+            console.log(main.style.minHeight);
         }
         else {
             dropdowns.forEach(dropdown => dropdown.classList.remove('show'));
             // subDropdowns.forEach(subDropdown => subDropdown.classList.remove('show'));
             dropdown.classList.add('show');
-            main.style.minHeight = `${sidebar.offsetHeight}px`;
+            main.style.minHeight = `${sidebar.offsetHeight + header.offsetHeight}px`;
+            console.log(main.style.minHeight);
             // console.log(sidebar.offsetHeight);
         }
     });
@@ -86,12 +106,13 @@ subDropdowns.forEach(subDropdown => {
         if (subDropdown.classList.contains('show')) {
             // console.log(subDropdowns, subDropdown.classList.contains('show'))
             subDropdown.classList.remove('show');
-            main.style.minHeight = `${sidebar.offsetHeight}px`;
+            // main.style.minHeight = `${sidebar.offsetHeight}px`;
+            main.style.minHeight = '';
         }
         else {
             subDropdowns.forEach(dropdown => subDropdown.classList.remove('show'));
             subDropdown.classList.add('show');
-            main.style.minHeight = `${sidebar.offsetHeight}px`;
+            main.style.minHeight = `${sidebar.offsetHeight + header.offsetHeight}px`;
             // console.log(sidebar.offsetHeight);
         }
     });
@@ -175,7 +196,11 @@ Array.from(headerNavDropdowns).forEach(headerNavDropdown => {
             // console.log(headerNavDropdown == navDropdown)
             if (navDropdown != headerNavDropdown) navDropdown.classList.remove('active')});
         headerNavDropdown.classList.toggle('active');
-        overlay.classList.toggle('visible');
+        if(!headerNavDropdown.classList.contains('nav-sidemenu')){ overlay.classList.add('visible')}
+        else {
+            overlay.style.backgroundColor = '';
+            overlay.classList.remove('visible');
+        }
         if (overlay.classList.contains('visible')) {
             overlay.style.backgroundColor = 'transparent';
             overlay.addEventListener('click', () => {
@@ -184,5 +209,85 @@ Array.from(headerNavDropdowns).forEach(headerNavDropdown => {
                 headerNavDropdown.classList.remove('active');
             }, {once: true});
         }
+    });
+});
+
+headerNavSidemenuBtn.addEventListener('click', () => {
+    sidebar2.classList.toggle('collapsed');
+});
+
+
+const createThemeElement = ({themeName, primary, secondary, accent}, parentElement) => {
+    const wrapper = document.createElement('div');
+    const body = document.createElement('div');
+    const header = document.createElement('div');
+    const main = document.createElement('div');
+    const sidebar = document.createElement('div');
+    const name = document.createElement('p')
+    wrapper.classList.add('theme-wrapper');
+    body.classList.add('theme-body');
+    main.classList.add('theme-main');
+    header.classList.add('theme-header');
+    sidebar.classList.add('theme-sidebar');
+    name.classList.add('theme-name', 'text-center');
+    name.innerText = themeName;
+
+    main.style.backgroundColor = primary;
+    sidebar.style.backgroundColor = secondary;
+    header.style.backgroundColor = accent;
+
+
+    body.appendChild(sidebar);
+    body.appendChild(main)
+    body.appendChild(header)
+    wrapper.appendChild(body);
+    wrapper.appendChild(name);
+    parentElement.appendChild(wrapper);
+}
+
+themes = [
+    {themeName: 'Blue', primary: '#f4f5f7', secondary: '#222d32', accent: '#3c8dbc'},
+    {themeName: 'Black', primary: '#f4f5f7', secondary: '#222d32', accent: '#fefefe'},
+    {themeName: 'Purple', primary: '#f4f5f7', secondary: '#222d32', accent: '#8a67d2'},
+    {themeName: 'Green', primary: '#f4f5f7', secondary: '#222d32', accent: '#46be8a'},
+    {themeName: 'Red', primary: '#f4f5f7', secondary: '#222d32', accent: '#f96868'},
+    {themeName: 'Yellow', primary: '#f4f5f7', secondary: '#222d32', accent: '#f39c12'},
+    {themeName: 'Black Light', primary: '#f4f5f7', secondary: '#222d32', accent: '#2f3337'},
+]
+
+themes.forEach(theme => {
+    createThemeElement(theme, themeContainer);
+});
+
+
+const draggablesParent = document.querySelector('.draggables');
+const draggables = document.querySelectorAll('.draggable');
+let isDragging = false, startX, startY, draggableIndex = -1;
+
+
+Array.from(draggables).forEach(draggable => {
+    draggable.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.pageX;
+        startY = e.pageY;
+        draggableIndex = Array.from(draggables).indexOf(draggable);
+        draggable.style.zIndex = '4';
+        draggable.style.borderColor = 'currentColor';   
+        draggable.style.position = 'relative';
+    });
+    document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        draggables[draggableIndex].style.left = `${e.pageX - startX}px`;
+        draggables[draggableIndex].style.top = `${e.pageY - startY}px`;
+    });
+    draggable.addEventListener('mouseup', (e) => {
+        isDragging = false
+        
+        draggables[draggableIndex].style.zIndex = '';
+        draggables[draggableIndex].style.left = '';
+        draggables[draggableIndex].style.top = '';
+        draggableIndex = -1;
+        draggable.style.borderColor = '';   
+    
     });
 });

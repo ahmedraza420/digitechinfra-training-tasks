@@ -21,7 +21,7 @@
 <body>
     <div class="dashboard">
         <!-- Header -->
-        <header class="position-sticky top-0 justify-content-between">
+        <header class="position-sticky top-0 justify-content-between" id="header">
             <a href="#" class="brand-logo">
                 <img src="./images/signin_logo.webp" alt="" class="d-none d-md-block" id="brandLogo">
                 <img src="./images/favicon.ico" alt="" class="d-block d-md-none" id="brandLogoSmall">
@@ -102,7 +102,7 @@
                         <li class="text-custom"><a><i class="fa-solid fa-power-off text-danger pb-2"></i>Sign Out</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-dropdown nav-sidemenu">
                     <a href="#" class="nav-link">
                         <i class="fa-solid fa-gear fa-spin"></i>
                     </a>
@@ -405,6 +405,31 @@
                 </a>
             </div>
         </aside>
+
+        <!-- Sidebar2 -->
+        <aside id="sidebar2" class="collapsed shadow-lg scrollbar-custom">
+            <h5>Layout Options</h5>
+            <label for="layoutFixedCheck" class="d-flex justify-content-between"><h6>Fixed Layout</h6> <input type="checkbox" name="" id="layoutFixedCheck"></label>
+            <p>Activate the fixed layout. You can't use fixed and boxed layouts together</p>
+            
+            <label for="layoutBoxxedCheck" class="d-flex justify-content-between"><h6>Boxed Layout</h6> <input type="checkbox" name="" id="layoutBoxedCheck"></label>
+            <p>Activate the boxed layout.</p>
+            
+            <label for="sidebarToggleCheck" class="d-flex justify-content-between"><h6>Toggle Sidebar</h6><input type="checkbox" name="" id="sidebarToggleCheck"></label>
+            <p>Toggle the left sidebar's state (open or collapse)</p>
+            <h5>Skins</h5>
+            <div class="themes-container d-flex flex-wrap">
+                <div class="theme-wrapper">
+                    <div class="theme-body">
+                        <div class="theme-header border-1 border-black"></div>
+                        <div class="theme-sidebar border-1 border-black"></div>
+                        <div class="theme-main border-1 border-black"></div>
+                    </div>
+                    <div class="theme-name">Custom</div>
+                </div>
+            </div>
+        </aside>    
+
 
         <!-- Main -->
         <section class="main d-flex flex-column" id="main">
@@ -768,28 +793,28 @@
             <div class="row row-cols-md-2">
                 <div class="row-child">
                     <div class="row5 expenses bg-white shadow">
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center h-100">
                             <span class="row5-icon"><i class="fa-regular fa-money-bill-1"></i></span>
-                            <div class="row5-content d-flex justify-content-between align-items-center w-100">
-                                <div class="d-flex flex-column gap-2">
+                            <div class="row5-content d-flex justify-content-between flex-wrap h-100 align-items-center w-100">
+                                <div class="row5-heading d-flex flex-column gap-2 h-auto justify-content-between">
                                     <span class="span-bold">Total Expenses</span>
                                     <a href="#" class="main-link d-flex align-items-center gap-2">View <i class="fa-solid fa-right-long"></i></a>
                                 </div>
-                                <h4 class="row5-money">RS. <span class="amount" id="expenseAmount">0.00</span></h4>
+                                <h4 class="row5-money text-end text-nowrap">RS. <span class="amount" id="expenseAmount">0.00</span></h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row-child">
                     <div class="row5 expenses bg-white shadow">
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center h-100">
                             <span class="row5-icon"><i class="fa fa-dollar-sign"></i></span>
-                            <div class="row5-content d-flex justify-content-between align-items-center w-100">
-                                <div class="d-flex flex-column gap-2">
+                            <div class="row5-content d-flex justify-content-between flex-wrap h-100 align-items-center w-100">
+                                <div class="row5-heading d-flex flex-column gap-2 h-auto justify-content-between">
                                     <span class="span-bold">Total Salaries Paid</span>
                                     <a href="#" class="main-link d-flex align-items-center gap-2">View <i class="fa-solid fa-right-long"></i></a>
                                 </div>
-                                <h4 class="row5-money">RS. <span class="amount" id="salariesAmount">225,967.27</span></h4>
+                                <h4 class="row5-money text-end text-nowrap">RS. <span class="amount" id="salariesAmount">225,967.27</span></h4>
                             </div>
                         </div>
                     </div>
@@ -806,7 +831,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0" defer></script>
-    <script src="calendar.js"></script>
+    <script src="calendar.js" defer></script>
     <script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
