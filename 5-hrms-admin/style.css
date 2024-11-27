@@ -10,7 +10,7 @@
     --bg-accent-hovered: color-mix(in srgb, var(--bg-accent) 80%, black 20%);
     /* --bg-custom-1: #4099ff; */
     --bg-accent-1: color-mix(in srgb, var(--bg-accent) 85%, white 15%);
-    --bg-secondary: white;
+    --bg-primary: white;
     /* --bg-disable: #337ab7; */
     --bg-accent-disabled: color-mix(in srgb, var(--bg-accent) 70%, grey 30%);
 }

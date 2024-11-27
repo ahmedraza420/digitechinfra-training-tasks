@@ -2,8 +2,10 @@
     --c-primary: #404E67 ;
     --c-secondary: #5b626b;
     --c-secondary-2: #a3a4a6;
-    --bg-main-white: #F5F7FA;
-    --bg-custom-white: #f2f6f8;
+    /* --bg-secondary: ;     */
+    --bg-main-white: color-mix(in srgb, var(--bg-accent), var(--bg-primary) 95%);
+    --bg-custom-white: color-mix(in srgb, var(--bg-accent), var(--bg-primary) 93%);
+    
     --sidebar-width: 14.375rem; 
     --sidebar-expanded-width: 14.375rem; 
     --sidebar-collapsed-width: 3.125rem;
@@ -21,7 +23,7 @@
 }
 
 body {
-    font-family: Poppins, sans-serif  !important;
+    font-family: 'Poppins', sans-serif  !important;
 }
 
 .dashboard {
@@ -76,6 +78,10 @@ body {
         background-color: var(--bg-accent-hovered);
     }
 
+    header .navbar-toggler {
+        height: 100%;
+    }
+
     header .nav-link {
         /* height: 100%; */
         color: white;
@@ -102,7 +108,7 @@ body {
         /* top: calc(100% + 0.5rem); */
         top: -50%;
         max-height: 80svh;
-        background-color: var(--bg-secondary);
+        background-color: var(--bg-primary);
         text-wrap: nowrap;
         font-size: var(--fs-custom);
         font-weight: 300;
@@ -125,9 +131,9 @@ body {
         padding: 0.5rem 1rem;
     }
 
-    header .nav-item ul li:hover {
+    /* header .nav-item ul li:hover {
         background-color: var(--bg-custom-white);
-    }
+    } */
 
     header .nav-item ul i {
         padding-right: 0.5rem;
@@ -148,7 +154,7 @@ body {
         grid-column: 1;
         max-width: var(--sidebar-expanded-width);
         min-height: calc(100svh - var(--header-min-height));
-        background-color: var(--bg-secondary);
+        background-color: var(--bg-primary);
         /* transition: var(--transition-1); */
     }
 
@@ -468,7 +474,7 @@ body {
             left: 100%;
             top: 0; 
             /* display: none; */
-            background-color: var(--bg-secondary);
+            background-color: var(--bg-primary);
         }
 
         #sidebar.collapsed > ul > li > .sub-menu a {
@@ -602,6 +608,10 @@ body {
         gap: 1.25rem;
         background-color: var(--bg-custom-white);
         /* transition: all 0.3s ease; */
+    }
+
+    .row1, .row2, .row3, .draggables-wrapper, .calendar, .row5 {
+        background-color: var(--bg-primary);
     }
 
     .main div {
@@ -1082,10 +1092,6 @@ body {
 @media only screen and (max-width: 400px) {
     header .nav-link {
         padding-inline : 0.5rem;
-    }
-
-    header .brand-logo {
-        order: 2;
     }
 
     header .header-nav {
