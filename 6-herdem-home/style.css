@@ -97,7 +97,7 @@ a {
     color: var(--c-accent) !important;
 }
 
-.text-hover-active:hover , .text-active:active, .text-active.active {
+.text-hover-active:hover , .text-active:active, .text-if-active.active {
     color: var(--c-active) !important;
 }
 
@@ -226,6 +226,10 @@ a {
 
 .herdem-logo-2 {
     max-height: 3em;
+}
+
+.carousel-control {
+    aspect-ratio: 1;
 }
 /* #endregion */
 
@@ -590,13 +594,6 @@ input, textarea {
 /* #endregion */
 
 /* #region Media Queries */
-@media only screen and (min-width: 1700px) {
-    /* .container-custom {
-        max-width: 1675px;
-    } */
-
-}
-
 @media only screen and (max-width: 991px) {
     .carousel-control-wrapper {
         right: 0;
@@ -609,7 +606,14 @@ input, textarea {
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767.5px) {
+    #firmDropdown {
+        position: static !important;
+        background-color: #efefef !important;
+        border-radius: 0 !important;
+        border: 0 !important;
+    }
+
     .achievement-section {
         transform: translateY(-10%);
     }

@@ -21,7 +21,7 @@
         <div class="row">
             <header class="px-0 position-relative z-3">
                 <div class="top-bar-wrapper d-flex justify-content-center align-content-center bg-primary text-secondary">
-                    <div class="container-lg top-bar d-flex align-content-center justify-content-between">
+                    <div class="container-lg px-2 px-sm-3 top-bar d-flex flex-wrap align-content-center justify-content-between">
                         <p class="location my-2">
                             <svg class="svg-fs-1-half" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -33,7 +33,7 @@
                             </svg>
                             Ofis Kule:2 Kat:18, No:12, Sisli Mecidiyekoy, Istanbul, Turkey
                         </p>
-                        <div class="socials d-flex align-items-center gap-3">
+                        <div class="socials d-none d-sm-flex align-items-center gap-3">
                             <i class="fa-brands fa-linkedin"></i>
                             <i class="fa-brands fa-twitter"></i>
                             <i class="fa-brands fa-spotify"></i>
@@ -49,39 +49,39 @@
                     <div class="collapse navbar-collapse justify-content-end justify-content-lg-between gap-2 px-lg-2 px-xl-4 text-accent" id="headerMenu">
                         <ul class="navbar-nav align-items-center gap-md-2 gap-lg-5">
                             <li class="nav-item">
-                                <a class="nav-link dropdown-toggle active text-active" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a href="#firmDropdown" class="nav-link dropdown-toggle active text-if-active text-hover-active text-accent text-center text-md-start" aria-current="page" role="button" aria-expanded="false" data-bs-toggle="collapse" aria-controls="firmDropdown">
                                     The Firm
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <ul class="dropdown collapse list-unstyled position-absolute bg-secondary z-2 fs-7 text-accent rounded-2 border border-dark border-opacity-25" id="firmDropdown">
+                                    <li><a class="dropdown-item py-1 pt-3 px-3 text-hover-active" href="#">Action</a></li>
+                                    <li><a class="dropdown-item py-1 px-3 text-hover-active" href="#">Another action</a></li>
+                                    <li><hr class="dropdown-divider my-2 border border-1 border-secondary-subtle border-opacity-25"></li>
+                                    <li><a class="dropdown-item py-1 pb-3 px-3 text-hover-active" href="#">Something else here</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link dropdown-toggle text-active" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle text-if-active text-hover-active text-accent text-center text-md-start" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Capabilities
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item text-center text-md-start text-hover-active" href="#">Action</a></li>
+                                    <li><a class="dropdown-item text-center text-md-start text-hover-active" href="#">Another action</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item text-center text-md-start text-hover-active" href="#">Something else here</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item text-active">
-                                <a class="nav-link" href="#">Explore</a>
+                            <li class="nav-item text-if-active text-hover-active text-accent">
+                                <a class="nav-link text-center text-md-start" href="#">Explore</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav align-items-center gap-md-2 gap-lg-5">
                             <li class="nav-item">
-                                <a class="nav-link text-active" href="#">News & Events</a>
+                                <a class="nav-link text-if-active text-hover-active text-accent text-center text-md-start" href="#">News & Events</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-active" href="#">Contact</a>
+                                <a class="nav-link text-if-active text-hover-active text-accent text-center text-md-start" href="#">Contact</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item text-center text-md-start">
                                 <div class="language-group d-flex h-50 align-items-center gap-1">
                                     <a class="nav-link d-flex align-items-center gap-2 text-dark" href="#"><img src="./images/flag-gb.svg" alt="">EN</a>
                                     <div class="vr opacity-50"></div>
@@ -1082,7 +1082,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="copyright-content d-flex gap-5 justify-content-between py-3 border-top border-opacity-25 border-white">
+                <div class="copyright-content d-flex gap-2 gap-md-5 justify-content-between py-3 border-top border-opacity-25 border-white">
                     <p><a class="copyright-section-link text-decoration-none" href="#">Terms & Conditions </a> • <a class="copyright-section-link text-decoration-none" href="#"> Privacy Policy</a></p>
                     <p>© 2024 herdem  |  All Rights Reserved. Powered by Digitech Infra Pvt. Ltd.</p>
                 </div>
