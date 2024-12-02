@@ -230,6 +230,10 @@ a {
 .carousel-control {
     aspect-ratio: 1;
 }
+
+.navbar-collapse {
+    gap: 10em;
+}
 /* #endregion */
 
 /* #region Carousel */
@@ -636,4 +640,94 @@ input, textarea {
     }
 }
 
+/* #endregion */
+
+/* #region Animations */
+/*
+.why-us {
+    overflow: hidden;
+}
+
+@keyframes shake-hr {
+    0% {
+        transform: translateX(0%);
+    }
+
+    25% {
+        transform: translateX(100%);
+    }
+
+    50% {
+        transform: translateX(0%);
+    }
+
+    75% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%)
+    }
+}
+
+.why-us-image {
+    animation: shake-hr 4s infinite linear;
+}
+
+.why-us-doodle {
+    animation: shake-hr 4s infinite linear;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.why-us-video {
+    animation: rotate 4s infinite linear;
+}
+
+@keyframes shake-dg {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100px, -100px);
+    }
+    50% {
+        transform: translate(0, 0);
+    }
+    75% {
+        transform: translate(-100px, 100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+.qualities > div:nth-child(1)  svg {
+    animation: shake-dg 4s infinite linear;
+}
+
+@media only screen and (max-width: 992px) {
+    .why-us-image, .why-us-video, .why-us-doodle, .qualities > div:nth-child(1) svg {
+        animation: none;
+    }
+}
+*/
 /* #endregion */
