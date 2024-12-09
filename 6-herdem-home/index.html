@@ -51,7 +51,9 @@
                             <li class="nav-item">
                                 <a href="#firmDropdown" class="nav-link dropdown-toggle active text-if-active text-hover-active text-accent text-center text-md-start" aria-current="page" role="button" aria-expanded="false" data-bs-toggle="collapse" aria-controls="firmDropdown">
                                     The Firm
-                                </a>
+                                </a> 
+                                <!-- A dropdown I made with bootstrap collapse because of it's default animation -->
+                                <!-- In smaller screens with position static (or relative), it can behave like an accordion which would look good -->
                                 <ul class="dropdown collapse list-unstyled position-absolute bg-secondary z-2 fs-7 text-accent rounded-2 border border-dark border-opacity-25" id="firmDropdown">
                                     <li><a class="dropdown-item py-1 pt-3 px-3 text-hover-active" href="#">Action</a></li>
                                     <li><a class="dropdown-item py-1 px-3 text-hover-active" href="#">Another action</a></li>
@@ -62,7 +64,8 @@
                             <li class="nav-item">
                                 <a class="nav-link dropdown-toggle text-if-active text-hover-active text-accent text-center text-md-start" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Capabilities
-                                </a>
+                                </a> 
+                                <!-- Bootstrap's prebuilt dropdowwn with no animation -->
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item text-center text-md-start text-hover-active" href="#">Action</a></li>
                                     <li><a class="dropdown-item text-center text-md-start text-hover-active" href="#">Another action</a></li>
